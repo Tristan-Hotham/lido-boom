@@ -1,0 +1,165 @@
+site_id,osm,name,kind,src,why,leisure,start,wikidata,disused,lat,lon
+osm0000,https://www.openstreetmap.org/node/10782521605,Tidal Pool,tidal,named,name,,,,0,50.527443,-5.024557
+osm0001,https://www.openstreetmap.org/node/10870577905,Tidal pool,tidal,named,name,,,,0,50.511181,-5.028154
+osm0002,https://www.openstreetmap.org/node/10956441022,Sugar Loaf Beach old tidal pool,tidal,named,name,swimming_pool,,,1,51.486282,-2.792007
+osm0003,https://www.openstreetmap.org/node/1115848399,Lido,lido,named,name,,,,0,55.499963,-4.610717
+osm0004,https://www.openstreetmap.org/node/11926178272,Lido,lido,named,name,,,,0,51.58049,-0.099543
+osm0005,https://www.openstreetmap.org/node/11947503986,Saltdean Lido,lido,named,name,,,,0,50.801958,-0.041736
+osm0006,https://www.openstreetmap.org/node/12251333865,Peterhead (Lido),lido,named,name,bathing_place,,,0,57.496353,-1.793803
+osm0007,https://www.openstreetmap.org/node/12400906449,Thames Lido,lido,named,name,,,,0,51.460182,-0.965229
+osm0008,https://www.openstreetmap.org/node/1273723542,Lido,lido,named,name,,,,0,53.196041,-1.436463
+osm0009,https://www.openstreetmap.org/node/12926120100,The Lido,lido,named,name,,,,0,55.205935,-6.652253
+osm0010,https://www.openstreetmap.org/node/13073897687,Lido,lido,named,name,,,,0,55.543452,-4.664376
+osm0011,https://www.openstreetmap.org/node/13617823335,Lido Musselburgh,lido,named,name,,,,0,55.942145,-3.052156
+osm0012,https://www.openstreetmap.org/node/1409601945,Finchley Lido,lido,named,name,swimming_pool,,,0,51.604621,-0.172299
+osm0013,https://www.openstreetmap.org/node/1723974575,Bulmore Lido (bulldozed),lido,named,name,swimming_pool,,,1,51.609556,-2.942608
+osm0014,https://www.openstreetmap.org/node/1819269074,The Lido,lido,named,name,,,,0,55.896989,-4.95257
+osm0005,https://www.openstreetmap.org/node/2012049384,Saltdean Lido,lido,named,name,,,,0,50.800357,-0.040102
+osm0015,https://www.openstreetmap.org/node/2188804728,Sandford Parks Lido,lido,named,name,swimming_pool,,Q7416213,0,51.893602,-2.070133
+osm0016,https://www.openstreetmap.org/node/2356358861,Woburn Lido,lido,named,name,swimming_pool,,,0,51.993373,-0.619012
+osm0017,https://www.openstreetmap.org/node/251436019,The Lido,lido,named,name,sports_centre,,,0,51.939315,-1.540445
+osm0018,https://www.openstreetmap.org/node/30813057,Tyntesfield Estate Victorian Open-air Bathing Pool,open-air,named,name,,,,0,51.429128,-2.709929
+osm0019,https://www.openstreetmap.org/node/4009377915,Lido Ponty,lido,named,name,sports_centre,,,0,51.60163,-3.338858
+osm0019,https://www.openstreetmap.org/node/4009385153,Lido Ponty - Ynysangharad War Memorial Park,lido,named,name,,,,0,51.601949,-3.339158
+osm0020,https://www.openstreetmap.org/node/4671702791,The Worthing Lido,lido,named,name,,,,0,50.808828,-0.372699
+osm0021,https://www.openstreetmap.org/node/469764939,Brockwell Lido,lido,named,name,,,,0,51.453361,-0.105343
+osm0021,https://www.openstreetmap.org/node/469764940,Brockwell Lido,lido,named,name,,,,0,51.453713,-0.10683
+osm0022,https://www.openstreetmap.org/node/469779544,Ruislip Lido,lido,named,name,,,,0,51.590669,-0.433468
+osm0022,https://www.openstreetmap.org/node/469779545,Ruislip Lido,lido,named,name,,,,0,51.590571,-0.433545
+osm0023,https://www.openstreetmap.org/node/469785383,Tooting Bec Lido,lido,named,name,,,,0,51.430731,-0.140779
+osm0023,https://www.openstreetmap.org/node/469785386,Tooting Bec Lido,lido,named,name,,,,0,51.430657,-0.141146
+osm0021,https://www.openstreetmap.org/node/4699019490,Brockwell Lido,lido,named,name,,,,0,51.453751,-0.106778
+osm0021,https://www.openstreetmap.org/node/4699019491,Brockwell Lido,lido,named,name,,,,0,51.45332,-0.10541
+osm0005,https://www.openstreetmap.org/node/4704059112,Saltdean Lido,lido,named,name,,,,0,50.800473,-0.039809
+osm0024,https://www.openstreetmap.org/node/489375099,Lido,lido,named,name,,,,0,54.672506,-1.772083
+osm0024,https://www.openstreetmap.org/node/489375103,Lido,lido,named,name,,,,0,54.672506,-1.772006
+osm0025,https://www.openstreetmap.org/node/502537471,The Lido,lido,named,name,,,,0,51.391929,1.391115
+osm0025,https://www.openstreetmap.org/node/502559906,The Lido,lido,named,name,,,,0,51.392084,1.389172
+osm0026,https://www.openstreetmap.org/node/503387810,Hilsea Lido,lido,named,name,,,,0,50.835278,-1.072201
+osm0026,https://www.openstreetmap.org/node/503387817,Hilsea Lido,lido,named,name,,,,0,50.835449,-1.072269
+osm0026,https://www.openstreetmap.org/node/503387821,Hilsea Lido,lido,named,name,,,,0,50.835657,-1.07235
+osm0026,https://www.openstreetmap.org/node/503387830,Hilsea Lido,lido,named,name,,,,0,50.835873,-1.072431
+osm0026,https://www.openstreetmap.org/node/503387835,Hilsea Lido,lido,named,name,,,,0,50.834931,-1.071555
+osm0026,https://www.openstreetmap.org/node/503387843,Hilsea Lido,lido,named,name,,,,0,50.834787,-1.071544
+osm0020,https://www.openstreetmap.org/node/565769207,The Lido,lido,named,name,,,,0,50.809206,-0.372419
+osm0020,https://www.openstreetmap.org/node/565769219,The Lido,lido,named,name,,,,0,50.809266,-0.372949
+osm0027,https://www.openstreetmap.org/node/7897440875,Spider's Web Outdoor Swimming Pool,open-air,named,name,,,,0,54.493757,-0.635859
+osm0028,https://www.openstreetmap.org/node/8562138607,The Lido Centre,lido,named,name,,,,0,51.510211,-0.319007
+osm0005,https://www.openstreetmap.org/node/8949335433,Saltdean Lido,lido,named,name,,,,0,50.80152,-0.04158
+osm0029,https://www.openstreetmap.org/node/9922387946,8. Bathing Pool,open-air,named,name,,,,0,54.693868,-1.179883
+osm0030,https://www.openstreetmap.org/relation/18673935,The Strand Lido,lido,named,name,sports_centre,,,0,51.395104,0.564387
+osm0023,https://www.openstreetmap.org/relation/200631,Tooting Bec Lido,lido,named,name,,,,0,51.430694,-0.140963
+osm0021,https://www.openstreetmap.org/relation/202292,Brockwell Lido,lido,named,name,,,,0,51.453536,-0.10609
+osm0022,https://www.openstreetmap.org/relation/205382,Ruislip Lido,lido,named,name,,,,0,51.59062,-0.433506
+osm0031,https://www.openstreetmap.org/relation/21409300,Wycombe Rye Lido & Gym,lido,named,name,sports_centre,,,0,51.623557,-0.739144
+osm0024,https://www.openstreetmap.org/relation/236000,Witton-le-Wear - Lido,lido,named,name,,,,0,54.672506,-1.772045
+osm0020,https://www.openstreetmap.org/relation/2381740,The Worthing Lido,lido,named,name,,,,0,50.808815,-0.372699
+osm0032,https://www.openstreetmap.org/relation/2395353,Lido,lido,named,name,,,Q5133269,0,51.459778,-2.611334
+osm0033,https://www.openstreetmap.org/relation/9446514,Askham Outdoor Swimming Pool,open-air,named,name,swimming_pool,,,0,54.60637,-2.754909
+osm0034,https://www.openstreetmap.org/way/1002572840,Millendreath Sea Pool,tidal,named,name,swimming_pool,,,0,50.3609,-4.435122
+osm0035,https://www.openstreetmap.org/way/100787902,Tarlair Outdoor Swimming Pool (unused),open-air,named,name,,,Q7686317,1,57.670648,-2.471107
+osm0036,https://www.openstreetmap.org/way/1015921517,Woody Bay Tidal Pool.,tidal,named,name,swimming_pool,,,0,51.224581,-3.894614
+osm0037,https://www.openstreetmap.org/way/106164388,Brynamman Lido,lido,named,name,,,,0,51.807297,-3.872451
+osm0038,https://www.openstreetmap.org/way/1066545504,Old Outdoor Swimming Pool,open-air,named,name,swimming_pool,,,1,50.957115,0.494299
+osm0039,https://www.openstreetmap.org/way/1074876863,Aldershot Lido,lido,named,name,sports_centre,,,0,51.234744,-0.747516
+osm0040,https://www.openstreetmap.org/way/1136151436,Portishead open air pool,open-air,named,name,sports_centre,,,0,51.493852,-2.771742
+osm0029,https://www.openstreetmap.org/way/1141773574,"Ruins of The Open-air Swimming Pool, old Hartlepool",open-air,named,name,,,,1,54.693713,-1.179237
+osm0041,https://www.openstreetmap.org/way/1167088793,Porthtowan Tidal Pool/Rockpool,tidal,named,name,swimming_pool,,,0,50.290163,-5.243081
+osm0042,https://www.openstreetmap.org/way/1167920630,The Trinkie Outdoor Swimming Pool,open-air,named,name,swimming_pool,,,0,58.428797,-3.069989
+osm0043,https://www.openstreetmap.org/way/117345000,Northcroft Lido,lido,named,name,swimming_pool,,,0,51.403186,-1.333553
+osm0044,https://www.openstreetmap.org/way/121545000,Brightlingsea Outdoor Swimming Pool,open-air,named,name,sports_centre,,,0,51.806936,1.017528
+osm0012,https://www.openstreetmap.org/way/127316422,Finchley Lido,lido,named,name,sports_centre,,Q15217697,0,51.604607,-0.172368
+osm0045,https://www.openstreetmap.org/way/1312881515,Tidal Swimming Pool,tidal,named,name,,,,0,55.35389,-4.793328
+osm0046,https://www.openstreetmap.org/way/134083457,Lido,lido,named,name,,,,0,56.024006,-3.817221
+osm0047,https://www.openstreetmap.org/way/135997609,Lido Park,lido,named,name,,,,0,52.26667,-2.146222
+osm0048,https://www.openstreetmap.org/way/1391809652,Bourne Outdoor Swimming Pool,open-air,named,name,sports_centre,,,0,52.765878,-0.373162
+osm0015,https://www.openstreetmap.org/way/148190437,Sandford Parks Lido,lido,named,name,sports_centre,,Q7416213,0,51.893599,-2.070227
+osm0007,https://www.openstreetmap.org/way/149747313,Thames Lido,lido,named,name,swimming_pool,,Q6411013,0,51.460247,-0.965362
+osm0007,https://www.openstreetmap.org/way/149747314,Thames Lido,lido,named,name,sports_centre,,,0,51.460234,-0.965432
+osm0047,https://www.openstreetmap.org/way/1499410905,Droitwich Spa Lido,lido,named,name,,,Q5308243,0,52.265843,-2.144992
+osm0049,https://www.openstreetmap.org/way/1532768290,Knaresborough Lido,lido,named,name,,,,0,53.997578,-1.451658
+osm0050,https://www.openstreetmap.org/way/165903745,Uxbridge Lido,lido,named,name,sports_centre,,Q26609412,0,51.551053,-0.467603
+osm0051,https://www.openstreetmap.org/way/186441807,Teignmouth Lido,lido,named,name,swimming_pool,,Q7695000,0,50.54846,-3.491561
+osm0012,https://www.openstreetmap.org/way/187826907,Finchley Lido Outdoor Pool,lido,named,name,swimming_pool,,,0,51.6045,-0.171798
+osm0026,https://www.openstreetmap.org/way/226358649,Hilsea Lido,lido,named,name,swimming_pool,,Q5764366,0,50.836301,-1.076362
+osm0052,https://www.openstreetmap.org/way/227651359,Winchester Lido,lido,named,name,sports_centre,,,0,51.06902,-1.315787
+osm0053,https://www.openstreetmap.org/way/228787732,Lido,lido,named,name,,,,0,53.139131,-1.555513
+osm0054,https://www.openstreetmap.org/way/23218999,Guildford Lido,lido,named,name,water_park,,Q5615833,0,51.247324,-0.569748
+osm0055,https://www.openstreetmap.org/way/234966210,Marbury Park open air pool,open-air,named,name,swimming_pool,,,0,53.283537,-2.525284
+osm0056,https://www.openstreetmap.org/way/23607683,Serpentine Lido,lido,named,name,swimming_area,,,0,51.504856,-0.168367
+osm0057,https://www.openstreetmap.org/way/237497881,Bathing Pool,open-air,named,name,swimming_pool,,,0,51.210473,-4.128345
+osm0058,https://www.openstreetmap.org/way/23793778,Jesus Green Lido,lido,named,name,swimming_pool,1923,Q6188166,0,52.212985,0.123262
+osm0059,https://www.openstreetmap.org/way/239062713,Petersfield Open Air Pool,open-air,named,name,swimming_pool,,,0,51.004347,-0.932035
+osm0060,https://www.openstreetmap.org/way/239591586,Arundel Lido,lido,named,name,swimming_pool,,,0,50.853218,-0.551362
+osm0061,https://www.openstreetmap.org/way/24271783,Bathing Pool,open-air,named,name,,,,0,51.344239,-0.7576
+osm0023,https://www.openstreetmap.org/way/244228436,Tooting Bec Lido,lido,named,name,sports_centre,,Q7824307,0,51.432277,-0.139299
+osm0062,https://www.openstreetmap.org/way/25569186,Hampton Outdoor Swimming Pool,open-air,named,name,swimming_pool,,Q5646271,0,51.418467,-0.357994
+osm0005,https://www.openstreetmap.org/way/25787936,Saltdean Lido,lido,named,name,water_park,,Q7406063,0,50.801394,-0.042083
+osm0063,https://www.openstreetmap.org/way/269618186,Eversholt Open-Air Pool,open-air,named,name,swimming_pool,,,0,51.983605,-0.572093
+osm0064,https://www.openstreetmap.org/way/286684106,Bude Sea Pool,tidal,named,name,swimming_pool,,Q4984989,0,50.832636,-4.554027
+osm0065,https://www.openstreetmap.org/way/288563228,Table Rocks Bathing Pool,open-air,named,name,,,,0,55.040565,-1.43138
+osm0066,https://www.openstreetmap.org/way/296070764,Peterborough Lido,lido,named,name,swimming_pool,,Q7178013,0,52.569989,-0.238422
+osm0067,https://www.openstreetmap.org/way/301592977,Cirencester Open Air Swimming Pool,open-air,named,name,sports_centre,,,0,51.718821,-1.97464
+osm0068,https://www.openstreetmap.org/way/30428390,Tinside Lido,lido,named,name,swimming_pool,,,0,50.363153,-4.142126
+osm0068,https://www.openstreetmap.org/way/316691444,Tinside Lido,lido,named,name,water_park,1935,,0,50.363218,-4.142202
+osm0021,https://www.openstreetmap.org/way/317411459,Brockwell Lido,lido,named,name,sports_centre,1937,Q4972912,0,51.453052,-0.106448
+osm0069,https://www.openstreetmap.org/way/318655889,Ilkley Swimming Pool and Lido,lido,named,name,sports_centre,,,0,53.932216,-1.820861
+osm0070,https://www.openstreetmap.org/way/319296036,Stratford Park Lido,lido,named,name,swimming_pool,,,0,51.750028,-2.22615
+osm0071,https://www.openstreetmap.org/way/327967039,Open Air Pool,open-air,named,name,swimming_pool,,,0,54.669257,-2.866809
+osm0072,https://www.openstreetmap.org/way/340954737,Swimming Pool (Open Air),open-air,named,name,swimming_pool,,,0,52.749111,-1.470878
+osm0073,https://www.openstreetmap.org/way/343694419,Weardale Open Air Pool,open-air,named,name,sports_centre,,,0,54.748201,-2.013787
+osm0031,https://www.openstreetmap.org/way/352619071,Wycombe Rye Lido,lido,named,name,sports_centre,,,0,51.623533,-0.739251
+osm0062,https://www.openstreetmap.org/way/359850439,Hampton Outdoor Swimming Pool,open-air,named,name,sports_centre,,,0,51.418342,-0.357962
+osm0039,https://www.openstreetmap.org/way/37878587,Aldershot Lido Main Pool,lido,named,name,swimming_pool,,,0,51.23539,-0.747422
+osm0022,https://www.openstreetmap.org/way/3871200,Ruislip Lido,lido,named,name,,,Q12067731,0,51.59116,-0.430322
+osm0074,https://www.openstreetmap.org/way/390990977,Shepton Mallet Lido,lido,named,name,swimming_pool,,,0,51.191282,-2.552564
+osm0075,https://www.openstreetmap.org/way/395667646,Sea Pool,tidal,named,name,,,,0,52.959127,1.076281
+osm0076,https://www.openstreetmap.org/way/397510801,Chapel Rock Sea Pool,tidal,named,name,swimming_pool,,,0,50.348679,-5.157144
+osm0077,https://www.openstreetmap.org/way/397540044,Woodgreen Open Air Pool,open-air,named,name,swimming_pool,,,0,52.061418,-1.350365
+osm0078,https://www.openstreetmap.org/way/398406422,Bathing pool (disused),open-air,named,name,,,,1,50.344365,-3.531027
+osm0079,https://www.openstreetmap.org/way/408733770,Helmsley Open Air Swimming Pool,open-air,named,name,swimming_pool,,,0,54.251127,-1.064074
+osm0080,https://www.openstreetmap.org/way/4264353,Parliament Hill Lido,lido,named,name,sports_centre,,Q7138910,0,51.556468,-0.151275
+osm0081,https://www.openstreetmap.org/way/435111500,Peckham Lido (ruin),lido,named,name,,,,1,51.463522,-0.065501
+osm0082,https://www.openstreetmap.org/way/452824816,Gourock Outdoor Swimming Pool (seasonal) and Gym,open-air,named,name,sports_centre,,,0,55.960911,-4.822292
+osm0008,https://www.openstreetmap.org/way/4620056,Smithy Pond Lido,lido,named,name,,,,0,53.196893,-1.435406
+osm0083,https://www.openstreetmap.org/way/466092168,Stonehaven Open Air Pool,open-air,named,name,sports_centre,,Q7619199,0,56.969751,-2.204521
+osm0084,https://www.openstreetmap.org/way/4947313,Lido,lido,named,name,,,,0,53.607235,-2.288232
+osm0025,https://www.openstreetmap.org/way/589648695,Cliftonville Lido,lido,named,name,,,,0,51.392205,1.390493
+osm0047,https://www.openstreetmap.org/way/594337586,Littls Al's at the Lido,lido,named,name,,,,0,52.266003,-2.145336
+osm0085,https://www.openstreetmap.org/way/62149866,North Berwick Tidal Pool,tidal,named,name,swimming_pool,,,0,56.060512,-2.7162
+osm0086,https://www.openstreetmap.org/way/6637460,London Fields Lido,lido,named,name,sports_centre,,,0,51.542651,-0.061436
+osm0087,https://www.openstreetmap.org/way/676295791,Old Bathing Pool Site,open-air,named,name,,,,1,50.850574,0.537691
+osm0007,https://www.openstreetmap.org/way/694588177,Thames Lido,lido,named,name,,,,0,51.459674,-0.965647
+osm0054,https://www.openstreetmap.org/way/698612245,Guildford Lido,lido,named,name,swimming_pool,,,0,51.247294,-0.569772
+osm0025,https://www.openstreetmap.org/way/70763593,Margate Lido,lido,named,name,,,,1,51.392907,1.390613
+osm0088,https://www.openstreetmap.org/way/75563745,The Old Lido,lido,named,name,,,,1,53.528459,-1.16822
+osm0040,https://www.openstreetmap.org/way/807597843,Portishead Open Air Pool,open-air,named,name,sports_centre,,,0,51.49403,-2.771658
+osm0089,https://www.openstreetmap.org/way/849528270,Beccles Lido,lido,named,name,sports_centre,,Q4878530,0,52.457746,1.55966
+osm0089,https://www.openstreetmap.org/way/849528273,Beccles Lido,lido,named,name,,,,0,52.457743,1.560483
+osm0090,https://www.openstreetmap.org/way/866722182,Trevone Bay Sea Pool,tidal,named,name,swimming_area,,,0,50.543735,-4.983643
+osm0019,https://www.openstreetmap.org/way/871672971,Pontypridd Lido Complex,lido,named,name,sports_centre,,,0,51.600826,-3.338455
+osm0066,https://www.openstreetmap.org/way/89042519,Peterborough Lido,lido,named,name,,,,0,52.570006,-0.238525
+osm0091,https://www.openstreetmap.org/way/93759700,Marine Terrace Tidal Pool,tidal,named,name,swimming_area,,Q134611596,0,51.388039,1.373656
+osm0092,https://www.openstreetmap.org/way/954042199,Ware Priory Lido,lido,named,name,sports_centre,,,0,51.811368,-0.036874
+osm0093,https://www.openstreetmap.org/way/958514199,Bathing Pool,open-air,named,name,,,,0,50.528784,-3.838568
+osm0069,https://www.openstreetmap.org/way/96053641,Ilkley Lido,lido,named,name,swimming_pool,1935-05-04,Q26672938,0,53.931931,-1.820133
+osm0094,https://www.openstreetmap.org/way/972702155,Cellardyke Tidal Pool,tidal,named,name,swimming_pool,,,0,56.227787,-2.680184
+osm0095,https://www.openstreetmap.org/way/978702743,Letchworth Lido,lido,named,name,sports_centre,,,0,51.984739,-0.224332
+osm0096,https://www.openstreetmap.org/way/98464382,Walpole Bay Tidal Pool,tidal,named,name,swimming_area,,Q26676852,0,51.393138,1.404212
+osm0097,https://www.openstreetmap.org/way/99004933,Blackpill Lido,lido,named,name,water_park,,,0,51.597284,-3.994452
+osm0098,https://www.openstreetmap.org/node/13790333650,Heckington Community Swimming Pool,open-air,outdoor,outdoor tag,swimming_pool,,,0,52.984768,-0.298376
+osm0099,https://www.openstreetmap.org/node/1682134713,Tropicana Outdoor Swimming Complex,open-air,outdoor,outdoor tag,swimming_pool,,,0,54.208726,-5.89059
+osm0063,https://www.openstreetmap.org/node/1726696391,Eversholt Swimming Pool,open-air,outdoor,outdoor tag,swimming_pool,,,0,51.983669,-0.572079
+osm0100,https://www.openstreetmap.org/way/116517519,Shoalstone Pool,open-air,outdoor,outdoor tag,swimming_pool,,,0,50.401268,-3.498904
+osm0000,https://www.openstreetmap.org/way/1167087847,Treyarnon Rock Pool,tidal,outdoor,outdoor tag,swimming_pool,,,0,50.527978,-5.025066
+osm0101,https://www.openstreetmap.org/way/1167118081,Castle Pool,open-air,outdoor,outdoor tag,swimming_pool,,,0,56.341878,-2.788847
+osm0102,https://www.openstreetmap.org/way/130683969,Rock Pool,tidal,outdoor,outdoor tag,swimming_pool,,,0,51.040805,-4.243087
+osm0103,https://www.openstreetmap.org/way/220494435,Outdoor Pool,open-air,outdoor,outdoor tag,swimming_pool,,,0,53.027254,-2.198571
+osm0104,https://www.openstreetmap.org/way/236573354,Jubilee Pool,open-air,outdoor,outdoor tag,swimming_pool,,,0,50.114842,-5.531534
+osm0105,https://www.openstreetmap.org/way/48976187,Park Road Lido,lido,outdoor,outdoor tag,swimming_pool,,,0,51.582835,-0.129874
+osm0106,https://www.openstreetmap.org/way/506461063,North Baths,open-air,outdoor,outdoor tag,swimming_pool,,,0,58.442141,-3.077288
+osm0107,https://www.openstreetmap.org/way/677126412,Devil's Point pool,open-air,outdoor,outdoor tag,swimming_pool,,,0,50.361241,-4.161227
+osm0108,https://www.openstreetmap.org/way/759342411,Mermaid Pool,open-air,outdoor,outdoor tag,swimming_pool,,,0,50.279161,-3.89759
+osm0109,https://www.openstreetmap.org/way/949104973,Outdoor Pool,open-air,outdoor,outdoor tag,swimming_pool,,,0,50.743444,-1.727518
+osm0110,https://www.openstreetmap.org/way/221457325,Tynemouth Outdoor Pool,open-air,disused,disused tag,,,,1,55.022849,-1.421719
+osm0111,https://www.openstreetmap.org/way/308312200,Grange Lido,lido,disused,disused tag,,,,1,54.187192,-2.912096

@@ -1,0 +1,1014 @@
+{
+ "register": {
+  "n": 73,
+  "open": 39,
+  "closed": 19,
+  "temporarily_closed": 1,
+  "unknown": 14,
+  "known_status": 59,
+  "with_open_year": 45,
+  "with_open_decade": 49,
+  "with_closed_year": 22,
+  "with_closed_decade": 24,
+  "reopened": 14,
+  "wikipedia_sourced": 58,
+  "approx_positions": 16,
+  "london": 17,
+  "coastal": 34,
+  "sea_or_tidal": 15,
+  "tidal": 6,
+  "earliest": 1815,
+  "earliest_name": "Cleveland Pools"
+ },
+ "decades": [
+  {
+   "decade": 1900,
+   "opened": 3,
+   "closed": 0,
+   "reopened": 0
+  },
+  {
+   "decade": 1910,
+   "opened": 1,
+   "closed": 0,
+   "reopened": 0
+  },
+  {
+   "decade": 1920,
+   "opened": 6,
+   "closed": 0,
+   "reopened": 0
+  },
+  {
+   "decade": 1930,
+   "opened": 33,
+   "closed": 0,
+   "reopened": 0
+  },
+  {
+   "decade": 1940,
+   "opened": 0,
+   "closed": 0,
+   "reopened": 0
+  },
+  {
+   "decade": 1950,
+   "opened": 1,
+   "closed": 0,
+   "reopened": 0
+  },
+  {
+   "decade": 1960,
+   "opened": 1,
+   "closed": 0,
+   "reopened": 0
+  },
+  {
+   "decade": 1970,
+   "opened": 2,
+   "closed": 5,
+   "reopened": 0
+  },
+  {
+   "decade": 1980,
+   "opened": 0,
+   "closed": 6,
+   "reopened": 0
+  },
+  {
+   "decade": 1990,
+   "opened": 0,
+   "closed": 8,
+   "reopened": 2
+  },
+  {
+   "decade": 2000,
+   "opened": 0,
+   "closed": 4,
+   "reopened": 5
+  },
+  {
+   "decade": 2010,
+   "opened": 0,
+   "closed": 1,
+   "reopened": 6
+  },
+  {
+   "decade": 2020,
+   "opened": 0,
+   "closed": 0,
+   "reopened": 1
+  }
+ ],
+ "openings": {
+  "n_dated": 49,
+  "peak_decade": 1930,
+  "peak_n": 33,
+  "share_peak": 0.6735,
+  "d1920s": 6,
+  "d1930s": 33,
+  "d1900s_1910s": 4,
+  "before_1900": 2,
+  "after_1945": 4,
+  "interwar": 39,
+  "y1935": 9,
+  "y1937": 5
+ },
+ "closures": {
+  "n_dated": 24,
+  "peak_decade": 1990,
+  "peak_n": 8,
+  "d1970s": 5,
+  "d1980s": 6,
+  "d1990s": 8,
+  "d2000s": 4,
+  "d2010s": 1,
+  "n_1970_1999": 19,
+  "share_1970_1999": 0.7917,
+  "n_1980_1999": 14,
+  "closed_by": 2,
+  "median_years_open": 61,
+  "n_years_open": 17,
+  "storms": [
+   "Cleethorpes 1978",
+   "New Brighton 1990"
+  ]
+ },
+ "reopenings": {
+  "n": 14,
+  "since_2000": 12,
+  "d1990s": 2,
+  "d2000s": 5,
+  "d2010s": 6,
+  "d2020s": 1,
+  "median_years_shut": 7,
+  "n_years_shut": 11,
+  "max_years_shut": 43,
+  "max_years_shut_name": "Thames Lido (King's Meadow Ladies' Bath)",
+  "list": [
+   {
+    "name": "Brockwell Lido",
+    "closed": 1990,
+    "reopened": 1994
+   },
+   {
+    "name": "Jubilee Pool",
+    "closed": 1992,
+    "reopened": 1994
+   },
+   {
+    "name": "Tinside Lido",
+    "closed": 1992,
+    "reopened": 2005
+   },
+   {
+    "name": "London Fields Lido",
+    "closed": null,
+    "reopened": 2006
+   },
+   {
+    "name": "Droitwich Spa Lido",
+    "closed": null,
+    "reopened": 2007
+   },
+   {
+    "name": "Clifton Lido (Clifton Victoria Baths)",
+    "closed": 1990,
+    "reopened": 2008
+   },
+   {
+    "name": "Banbury Lido (Woodgreen Open Air Pool)",
+    "closed": 2002,
+    "reopened": 2009
+   },
+   {
+    "name": "Portishead Open Air Pool",
+    "closed": null,
+    "reopened": 2010
+   },
+   {
+    "name": "Beccles Lido",
+    "closed": 2008,
+    "reopened": 2010
+   },
+   {
+    "name": "Charlton Lido",
+    "closed": 1989,
+    "reopened": 2012
+   },
+   {
+    "name": "Hilsea Lido",
+    "closed": 2008,
+    "reopened": 2014
+   },
+   {
+    "name": "Saltdean Lido",
+    "closed": 2010,
+    "reopened": 2017
+   },
+   {
+    "name": "Thames Lido (King's Meadow Ladies' Bath)",
+    "closed": 1974,
+    "reopened": 2017
+   },
+   {
+    "name": "Cleveland Pools",
+    "closed": 1984,
+    "reopened": 2022
+   }
+  ]
+ },
+ "fate": {
+  "known": 59,
+  "ever_closed": 33,
+  "share_ever_closed": 0.5593,
+  "never_closed_open": 26,
+  "closed_then_reopened": 14,
+  "closed_for_good": 19,
+  "share_closed_reopened": 0.4242
+ },
+ "thirties": {
+  "n": 33,
+  "known": 27,
+  "open": 17,
+  "open_never_closed": 9,
+  "open_after_reopening": 8,
+  "closed": 10,
+  "unknown": 6,
+  "share_of_169": 0.1953
+ },
+ "curve": {
+  "n": 39,
+  "peak_open": 37,
+  "peak_year": 1962,
+  "low_year": 2002,
+  "open_1939": 35,
+  "open_1970": 37,
+  "open_1995": 24,
+  "open_2026": 29,
+  "shut_1995": 15,
+  "shut_2026": 10,
+  "low_open": 22,
+  "max_shut": 17,
+  "max_shut_year": 2002
+ },
+ "osm": {
+  "sites": 112,
+  "open": 74,
+  "disused": 10,
+  "unclear": 28,
+  "open_lido": 34,
+  "open_openair": 28,
+  "open_tidal": 12,
+  "open_coastal": 33,
+  "share_open_coastal": 0.4459,
+  "open_london": 9,
+  "open_sw": 21,
+  "open_se": 15,
+  "open_scotland": 8,
+  "open_wales": 2,
+  "open_ni": 1,
+  "tidal_cornwall_devon": 8,
+  "tidal_cornwall": 6,
+  "coastal_sw": 17,
+  "features": 164,
+  "tidal_cornwall_names": [
+   "Bude Sea Pool",
+   "Chapel Rock Sea Pool",
+   "Millendreath Sea Pool",
+   "Porthtowan Tidal Pool/Rockpool",
+   "Tidal Pool",
+   "Trevone Bay Sea Pool"
+  ],
+  "tidal_names": [
+   [
+    "Bude Sea Pool",
+    "Crooklets",
+    "Cornwall"
+   ],
+   [
+    "Cellardyke Tidal Pool",
+    "Kilrenny",
+    "Fife"
+   ],
+   [
+    "Chapel Rock Sea Pool",
+    "Perranporth",
+    "Cornwall"
+   ],
+   [
+    "Marine Terrace Tidal Pool",
+    "Margate",
+    "Kent"
+   ],
+   [
+    "Millendreath Sea Pool",
+    "Millendreath",
+    "Cornwall"
+   ],
+   [
+    "North Berwick Tidal Pool",
+    "North Berwick",
+    "East Lothian"
+   ],
+   [
+    "Porthtowan Tidal Pool/Rockpool",
+    "Porthtowan",
+    "Cornwall"
+   ],
+   [
+    "Rock Pool",
+    "Westward Ho!",
+    "Devon"
+   ],
+   [
+    "Tidal Pool",
+    "Treyarnon",
+    "Cornwall"
+   ],
+   [
+    "Trevone Bay Sea Pool",
+    "Trevone",
+    "Cornwall"
+   ],
+   [
+    "Walpole Bay Tidal Pool",
+    "Cliftonville",
+    "Kent"
+   ],
+   [
+    "Woody Bay Tidal Pool.",
+    "Barbrook",
+    "Devon"
+   ]
+  ]
+ },
+ "regions": [
+  {
+   "region": "London",
+   "open_sites": 9,
+   "closed_sites": 3,
+   "register_entries": 17,
+   "register_opened_1930s": 11,
+   "osm_open": 9,
+   "population_2021": 8799728,
+   "open_per_million": 1.02
+  },
+  {
+   "region": "South East",
+   "open_sites": 16,
+   "closed_sites": 5,
+   "register_entries": 14,
+   "register_opened_1930s": 7,
+   "osm_open": 15,
+   "population_2021": 9278065,
+   "open_per_million": 1.72
+  },
+  {
+   "region": "South West",
+   "open_sites": 24,
+   "closed_sites": 4,
+   "register_entries": 12,
+   "register_opened_1930s": 5,
+   "osm_open": 21,
+   "population_2021": 5701186,
+   "open_per_million": 4.21
+  },
+  {
+   "region": "East of England",
+   "open_sites": 9,
+   "closed_sites": 1,
+   "register_entries": 7,
+   "register_opened_1930s": 2,
+   "osm_open": 8,
+   "population_2021": 6335074,
+   "open_per_million": 1.42
+  },
+  {
+   "region": "East Midlands",
+   "open_sites": 4,
+   "closed_sites": 0,
+   "register_entries": 3,
+   "register_opened_1930s": 1,
+   "osm_open": 3,
+   "population_2021": 4880054,
+   "open_per_million": 0.82
+  },
+  {
+   "region": "West Midlands",
+   "open_sites": 2,
+   "closed_sites": 0,
+   "register_entries": 1,
+   "register_opened_1930s": 1,
+   "osm_open": 1,
+   "population_2021": 5950757,
+   "open_per_million": 0.34
+  },
+  {
+   "region": "North West",
+   "open_sites": 3,
+   "closed_sites": 3,
+   "register_entries": 3,
+   "register_opened_1930s": 2,
+   "osm_open": 3,
+   "population_2021": 7417397,
+   "open_per_million": 0.4
+  },
+  {
+   "region": "North East",
+   "open_sites": 1,
+   "closed_sites": 1,
+   "register_entries": 1,
+   "register_opened_1930s": 0,
+   "osm_open": 1,
+   "population_2021": 2647013,
+   "open_per_million": 0.38
+  },
+  {
+   "region": "Yorkshire and the Humber",
+   "open_sites": 3,
+   "closed_sites": 2,
+   "register_entries": 3,
+   "register_opened_1930s": 1,
+   "osm_open": 2,
+   "population_2021": 5480774,
+   "open_per_million": 0.55
+  },
+  {
+   "region": "Wales",
+   "open_sites": 2,
+   "closed_sites": 2,
+   "register_entries": 4,
+   "register_opened_1930s": 2,
+   "osm_open": 2,
+   "population_2021": 3107494,
+   "open_per_million": 0.64
+  },
+  {
+   "region": "Scotland",
+   "open_sites": 8,
+   "closed_sites": 3,
+   "register_entries": 7,
+   "register_opened_1930s": 1,
+   "osm_open": 8,
+   "population_2021": "",
+   "open_per_million": ""
+  },
+  {
+   "region": "Northern Ireland",
+   "open_sites": 1,
+   "closed_sites": 0,
+   "register_entries": 1,
+   "register_opened_1930s": 0,
+   "osm_open": 1,
+   "population_2021": "",
+   "open_per_million": ""
+  }
+ ],
+ "combined": {
+  "open": 82,
+  "closed": 24,
+  "coastal_open": 36,
+  "share_coastal_open": 0.439,
+  "london_open": 9,
+  "sw_open": 24,
+  "se_open": 16,
+  "south_open": 49,
+  "share_south": 0.5976,
+  "north_open": 7,
+  "top_region": "South West",
+  "top_per_million": 4.21,
+  "sw_coastal_open": 19,
+  "england_open": 71
+ },
+ "wikidata": {
+  "items": 83,
+  "with_inception": 9
+ },
+ "published": {
+  "built_1930s": 169,
+  "open_england": 127,
+  "lcc_lidos": 13,
+  "scotland_remaining": 3,
+  "finchley_record": 11962,
+  "finchley_record_date": "11 July 1971",
+  "tooting_yards": "100 by 33",
+  "jubilee_1935_visitors": 60000,
+  "new_brighton_cost": 90000,
+  "cleveland_built": 1815
+ },
+ "wikipedia_articles": 1083,
+ "examples": {
+  "tooting": {
+   "name": "Tooting Bec Lido",
+   "opened": 1906,
+   "closed": null,
+   "reopened": null,
+   "status": "open"
+  },
+  "parliament": {
+   "name": "Parliament Hill Lido",
+   "opened": 1938,
+   "closed": null,
+   "reopened": null,
+   "status": "open"
+  },
+  "brockwell": {
+   "name": "Brockwell Lido",
+   "opened": 1937,
+   "closed": 1990,
+   "reopened": 1994,
+   "status": "open"
+  },
+  "charlton": {
+   "name": "Charlton Lido",
+   "opened": 1939,
+   "closed": 1989,
+   "reopened": 2012,
+   "status": "open"
+  },
+  "finchley": {
+   "name": "Finchley Lido (1931 open-air pool)",
+   "opened": 1931,
+   "closed": 1992,
+   "reopened": null,
+   "status": "closed"
+  },
+  "victoriapark": {
+   "name": "Victoria Park Lido",
+   "opened": 1936,
+   "closed": 1986,
+   "reopened": null,
+   "status": "closed"
+  },
+  "uxbridge": {
+   "name": "Uxbridge Lido",
+   "opened": 1935,
+   "closed": null,
+   "reopened": null,
+   "status": "open"
+  },
+  "ruislip": {
+   "name": "Ruislip Lido",
+   "opened": 1933,
+   "closed": null,
+   "reopened": null,
+   "status": "unknown"
+  },
+  "edmonton": {
+   "name": "Edmonton Lido",
+   "opened": null,
+   "closed": null,
+   "reopened": null,
+   "status": "unknown"
+  },
+  "tottenham": {
+   "name": "Tottenham Lido",
+   "opened": 1937,
+   "closed": null,
+   "reopened": null,
+   "status": "unknown"
+  },
+  "westham": {
+   "name": "West Ham Municipal Lido",
+   "opened": 1937,
+   "closed": null,
+   "reopened": null,
+   "status": "unknown"
+  },
+  "rushgreen": {
+   "name": "Rush Green Lido",
+   "opened": 1935,
+   "closed": null,
+   "reopened": null,
+   "status": "unknown"
+  },
+  "whippscross": {
+   "name": "Whipps Cross Lido",
+   "opened": null,
+   "closed": null,
+   "reopened": null,
+   "status": "unknown"
+  },
+  "peckham": {
+   "name": "Peckham Rye Lido",
+   "opened": null,
+   "closed": 1987,
+   "reopened": null,
+   "status": "closed"
+  },
+  "londonfields": {
+   "name": "London Fields Lido",
+   "opened": null,
+   "closed": null,
+   "reopened": 2006,
+   "status": "open"
+  },
+  "hilsea": {
+   "name": "Hilsea Lido",
+   "opened": 1935,
+   "closed": 2008,
+   "reopened": 2014,
+   "status": "open"
+  },
+  "saltdean": {
+   "name": "Saltdean Lido",
+   "opened": 1938,
+   "closed": 2010,
+   "reopened": 2017,
+   "status": "open"
+  },
+  "blackrock": {
+   "name": "Black Rock Lido",
+   "opened": 1935,
+   "closed": 1978,
+   "reopened": null,
+   "status": "closed"
+  },
+  "tinside": {
+   "name": "Tinside Lido",
+   "opened": 1935,
+   "closed": 1992,
+   "reopened": 2005,
+   "status": "open"
+  },
+  "jubilee": {
+   "name": "Jubilee Pool",
+   "opened": 1935,
+   "closed": 1992,
+   "reopened": 1994,
+   "status": "open"
+  },
+  "bude": {
+   "name": "Bude Sea Pool",
+   "opened": 1930,
+   "closed": null,
+   "reopened": null,
+   "status": "open"
+  },
+  "walpole": {
+   "name": "Walpole Bay Tidal Pool",
+   "opened": 1937,
+   "closed": null,
+   "reopened": null,
+   "status": "open"
+  },
+  "clevedon": {
+   "name": "Clevedon Marine Lake",
+   "opened": 1929,
+   "closed": null,
+   "reopened": null,
+   "status": "open"
+  },
+  "portishead": {
+   "name": "Portishead Open Air Pool",
+   "opened": 1962,
+   "closed": null,
+   "reopened": 2010,
+   "status": "open"
+  },
+  "tropicana": {
+   "name": "Tropicana (The Pool)",
+   "opened": 1937,
+   "closed": 2000,
+   "reopened": null,
+   "status": "closed"
+  },
+  "clifton": {
+   "name": "Clifton Lido (Clifton Victoria Baths)",
+   "opened": 1850,
+   "closed": 1990,
+   "reopened": 2008,
+   "status": "open"
+  },
+  "cleveland": {
+   "name": "Cleveland Pools",
+   "opened": 1815,
+   "closed": 1984,
+   "reopened": 2022,
+   "status": "temporarily closed"
+  },
+  "thames": {
+   "name": "Thames Lido (King's Meadow Ladies' Bath)",
+   "opened": 1903,
+   "closed": 1974,
+   "reopened": 2017,
+   "status": "open"
+  },
+  "sandford": {
+   "name": "Sandford Parks Lido",
+   "opened": 1935,
+   "closed": null,
+   "reopened": null,
+   "status": "open"
+  },
+  "peterborough": {
+   "name": "Peterborough Lido",
+   "opened": 1936,
+   "closed": null,
+   "reopened": null,
+   "status": "open"
+  },
+  "banbury": {
+   "name": "Banbury Lido (Woodgreen Open Air Pool)",
+   "opened": 1939,
+   "closed": 2002,
+   "reopened": 2009,
+   "status": "open"
+  },
+  "beccles": {
+   "name": "Beccles Lido",
+   "opened": 1959,
+   "closed": 2008,
+   "reopened": 2010,
+   "status": "open"
+  },
+  "droitwich": {
+   "name": "Droitwich Spa Lido",
+   "opened": null,
+   "closed": null,
+   "reopened": 2007,
+   "status": "open"
+  },
+  "grange": {
+   "name": "Grange Lido",
+   "opened": 1932,
+   "closed": 1993,
+   "reopened": null,
+   "status": "closed"
+  },
+  "teignmouth": {
+   "name": "Teignmouth Lido",
+   "opened": null,
+   "closed": null,
+   "reopened": null,
+   "status": "open"
+  },
+  "woburn": {
+   "name": "Woburn Lido",
+   "opened": 1911,
+   "closed": null,
+   "reopened": null,
+   "status": "open"
+  },
+  "aldershot": {
+   "name": "Aldershot Lido",
+   "opened": 1930,
+   "closed": null,
+   "reopened": null,
+   "status": "open"
+  },
+  "calverton": {
+   "name": "Spring Water Lido",
+   "opened": 1935,
+   "closed": null,
+   "reopened": null,
+   "status": "unknown"
+  },
+  "bulmore": {
+   "name": "Bulmore Lido",
+   "opened": 1934,
+   "closed": null,
+   "reopened": null,
+   "status": "closed"
+  },
+  "newbrighton": {
+   "name": "New Brighton Bathing Pool",
+   "opened": 1934,
+   "closed": 1990,
+   "reopened": null,
+   "status": "closed"
+  },
+  "tynemouth": {
+   "name": "Tynemouth Outdoor Pool",
+   "opened": 1925,
+   "closed": null,
+   "reopened": null,
+   "status": "closed"
+  },
+  "blackpool": {
+   "name": "South Shore Open Air Baths",
+   "opened": 1923,
+   "closed": null,
+   "reopened": null,
+   "status": "closed"
+  },
+  "skegness": {
+   "name": "Skegness outdoor pool",
+   "opened": 1928,
+   "closed": null,
+   "reopened": null,
+   "status": "unknown"
+  },
+  "prestatyn": {
+   "name": "Prestatyn Lido (seawater pool)",
+   "opened": 1923,
+   "closed": null,
+   "reopened": null,
+   "status": "unknown"
+  },
+  "hastings": {
+   "name": "Hastings Bathing Pool",
+   "opened": null,
+   "closed": 1986,
+   "reopened": null,
+   "status": "closed"
+  },
+  "cleethorpes": {
+   "name": "Cleethorpes Bathing Pool",
+   "opened": null,
+   "closed": 1978,
+   "reopened": null,
+   "status": "closed"
+  },
+  "burntisland": {
+   "name": "Burntisland open-air bathing pool",
+   "opened": null,
+   "closed": 1979,
+   "reopened": null,
+   "status": "closed"
+  },
+  "portobello": {
+   "name": "Portobello Open Air Pool",
+   "opened": null,
+   "closed": 1979,
+   "reopened": null,
+   "status": "closed"
+  },
+  "gourock": {
+   "name": "Gourock Outdoor Pool",
+   "opened": 1909,
+   "closed": null,
+   "reopened": null,
+   "status": "open"
+  },
+  "milford": {
+   "name": "Milford Haven outdoor pool (the Rath)",
+   "opened": 1939,
+   "closed": null,
+   "reopened": null,
+   "status": "closed"
+  },
+  "ilkley": {
+   "name": "Ilkley Lido",
+   "opened": 1935,
+   "closed": null,
+   "reopened": null,
+   "status": "open"
+  },
+  "jesusgreen": {
+   "name": "Jesus Green Lido",
+   "opened": 1923,
+   "closed": null,
+   "reopened": null,
+   "status": "open"
+  },
+  "arundel": {
+   "name": "Arundel Lido",
+   "opened": null,
+   "closed": null,
+   "reopened": null,
+   "status": "open"
+  },
+  "ingleton": {
+   "name": "Ingleton Lido",
+   "opened": null,
+   "closed": null,
+   "reopened": null,
+   "status": "open"
+  },
+  "broomhill": {
+   "name": "Broomhill Pool",
+   "opened": null,
+   "closed": null,
+   "reopened": null,
+   "status": "closed"
+  },
+  "pontypridd": {
+   "name": "Lido Ponty (Ynysangharad Park)",
+   "opened": null,
+   "closed": null,
+   "reopened": null,
+   "status": "open"
+  },
+  "brightlingsea": {
+   "name": "Brightlingsea Lido",
+   "opened": 1932,
+   "closed": null,
+   "reopened": null,
+   "status": "open"
+  },
+  "tarlair": {
+   "name": "Tarlair Swimming Pool",
+   "opened": 1930,
+   "closed": null,
+   "reopened": null,
+   "status": "closed"
+  },
+  "topsham": {
+   "name": "Topsham Outdoor Swimming Pool",
+   "opened": 1979,
+   "closed": null,
+   "reopened": null,
+   "status": "open"
+  },
+  "worthing": {
+   "name": "Worthing Lido",
+   "opened": null,
+   "closed": null,
+   "reopened": null,
+   "status": "closed"
+  },
+  "margate": {
+   "name": "Cliftonville Lido",
+   "opened": null,
+   "closed": null,
+   "reopened": null,
+   "status": "closed"
+  },
+  "pells": {
+   "name": "Pells Pool",
+   "opened": null,
+   "closed": null,
+   "reopened": null,
+   "status": "open"
+  },
+  "hampton": {
+   "name": "Hampton Pool",
+   "opened": null,
+   "closed": null,
+   "reopened": null,
+   "status": "open"
+  },
+  "guildford": {
+   "name": "Guildford Lido",
+   "opened": null,
+   "closed": null,
+   "reopened": null,
+   "status": "open"
+  },
+  "lymington": {
+   "name": "Lymington Open Air Sea Water Baths",
+   "opened": null,
+   "closed": null,
+   "reopened": null,
+   "status": "unknown"
+  },
+  "stonehaven": {
+   "name": "Stonehaven Open Air Pool",
+   "opened": null,
+   "closed": null,
+   "reopened": null,
+   "status": "open"
+  },
+  "stmonans": {
+   "name": "St Monans bathing pool",
+   "opened": null,
+   "closed": null,
+   "reopened": null,
+   "status": "unknown"
+  },
+  "woodup": {
+   "name": "Woodup Pool",
+   "opened": null,
+   "closed": null,
+   "reopened": null,
+   "status": "open"
+  },
+  "woodhall": {
+   "name": "Jubilee Park Swimming Pool",
+   "opened": null,
+   "closed": null,
+   "reopened": null,
+   "status": "open"
+  },
+  "bothwell": {
+   "name": "Bothwell Bridge Lido",
+   "opened": null,
+   "closed": null,
+   "reopened": null,
+   "status": "unknown"
+  },
+  "bloemfontein": {
+   "name": "Bloemfontein Lido",
+   "opened": null,
+   "closed": null,
+   "reopened": null,
+   "status": "unknown"
+  },
+  "rockpoolni": {
+   "name": "Rock Pool",
+   "opened": null,
+   "closed": null,
+   "reopened": null,
+   "status": "unknown"
+  },
+  "westwardho": {
+   "name": "The Rock Pool",
+   "opened": null,
+   "closed": null,
+   "reopened": null,
+   "status": "open"
+  }
+ }
+}

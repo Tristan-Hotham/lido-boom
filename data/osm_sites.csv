@@ -1,0 +1,113 @@
+site_id,name,kind,status_osm,lat,lon,region,county,nearest_town,coast_km,start_date,wikidata,n_features,osm_ids
+osm0000,Tidal Pool,tidal,open,50.52771,-5.02481,South West,Cornwall,Treyarnon,0.12,,,2,node/10782521605 way/1167087847
+osm0001,Tidal pool,tidal,unclear,50.51118,-5.02815,South West,Cornwall,Porthcothan,0.02,,,1,node/10870577905
+osm0002,Sugar Loaf Beach old tidal pool,tidal,disused,51.48628,-2.79201,South West,North Somerset,West Hill,0.12,,,1,node/10956441022
+osm0003,Lido,lido,unclear,55.49996,-4.61072,Scotland,South Ayrshire,Prestwick,0.56,,,1,node/1115848399
+osm0004,Lido,lido,unclear,51.58049,-0.09954,London,Greater London,Harringay,34.7,,,1,node/11926178272
+osm0005,Saltdean Lido,lido,open,50.80114,-0.04106,South East,The City of Brighton and Hove,Saltdean,0.28,,Q7406063,5,way/25787936 node/11947503986 node/2012049384 node/4704059112 node/8949335433
+osm0006,Peterhead (Lido),lido,open,57.49635,-1.7938,Scotland,Aberdeenshire,Meethill,1.06,,,1,node/12251333865
+osm0007,Thames Lido,lido,open,51.46008,-0.96542,South East,Reading,Lower Caversham,68.25,,Q6411013,4,way/149747313 way/149747314 node/12400906449 way/694588177
+osm0008,Lido,lido,unclear,53.19647,-1.43593,East Midlands,Derbyshire,Hardwick Wood,72.83,,,2,node/1273723542 way/4620056
+osm0009,The Lido,lido,unclear,55.20593,-6.65225,Northern Ireland,,,0.08,,,1,node/12926120100
+osm0010,Lido,lido,unclear,55.54345,-4.66438,Scotland,South Ayrshire,Troon,0.4,,,1,node/13073897687
+osm0011,Lido Musselburgh,lido,unclear,55.94214,-3.05216,Scotland,East Lothian,Musselburgh,0.69,,,1,node/13617823335
+osm0012,Finchley Lido,lido,open,51.60458,-0.17215,London,Greater London,North Finchley,40.14,,Q15217697,3,node/1409601945 way/127316422 way/187826907
+osm0013,Bulmore Lido (bulldozed),lido,disused,51.60956,-2.94261,Wales,Casnewydd - Newport,The Village,5.59,,,1,node/1723974575
+osm0014,The Lido,lido,unclear,55.89699,-4.95257,Scotland,Argyll and Bute,Innellan,0.22,,,1,node/1819269074
+osm0015,Sandford Parks Lido,lido,open,51.8936,-2.07018,South West,Gloucestershire,Coltham Fields,24.48,,Q7416213,2,node/2188804728 way/148190437
+osm0016,Woburn Lido,lido,open,51.99337,-0.61901,East of England,Central Bedfordshire,Woburn,88.87,,,1,node/2356358861
+osm0017,The Lido,lido,open,51.93932,-1.54045,South East,Oxfordshire,Chipping Norton,58.17,,,1,node/251436019
+osm0018,Tyntesfield Estate Victorian Open-air Bathing Pool,open-air,unclear,51.42913,-2.70993,South West,North Somerset,Flax Bourton,7.45,,,1,node/30813057
+osm0019,Lido Ponty,lido,open,51.60147,-3.33882,Wales,Rhondda Cynon Taf - Rhondda Cynon Taf,Pontypridd,19.09,,,3,node/4009377915 way/871672971 node/4009385153
+osm0020,The Lido,lido,unclear,50.80903,-0.37269,South East,West Sussex,Worthing,0.13,,,4,node/565769207 node/565769219 node/4671702791 relation/2381740
+osm0021,Brockwell Lido,lido,open,51.45346,-0.10615,London,Greater London,Brockwell Park,32.11,1937,Q4972912,6,way/317411459 node/469764939 node/469764940 node/4699019490 node/4699019491 relation/202292
+osm0022,Ruislip Lido,lido,unclear,51.59076,-0.43271,London,Greater London,Ruislip Common,55.63,,Q12067731,4,node/469779544 node/469779545 relation/205382 way/3871200
+osm0023,Tooting Bec Lido,lido,open,51.43109,-0.14055,London,Greater London,Streatham Park,34.44,,Q7824307,4,way/244228436 node/469785383 node/469785386 relation/200631
+osm0024,Lido,lido,unclear,54.67251,-1.77204,North East,County Durham,Witton-le-Wear,33.32,,,3,node/489375099 node/489375103 relation/236000
+osm0025,The Lido,lido,unclear,51.39228,1.39035,South East,Kent,Margate,0.24,,,4,node/502537471 node/502559906 way/70763593 way/589648695
+osm0026,Hilsea Lido,lido,open,50.83547,-1.07267,South East,City of Portsmouth,Highbury,0.01,,Q5764366,7,way/226358649 node/503387810 node/503387817 node/503387821 node/503387830 node/503387835 node/503387843
+osm0027,Spider's Web Outdoor Swimming Pool,open-air,unclear,54.49376,-0.63586,Yorkshire and the Humber,North Yorkshire,West Cliff,1.0,,,1,node/7897440875
+osm0028,The Lido Centre,lido,unclear,51.51021,-0.31901,London,Greater London,West Ealing,46.47,,,1,node/8562138607
+osm0029,8. Bathing Pool,open-air,unclear,54.69379,-1.17956,North East,Hartlepool,Croft on Heugh,0.0,,,2,node/9922387946 way/1141773574
+osm0030,The Strand Lido,lido,open,51.3951,0.56439,South East,Medway,Grange,0.54,,,1,relation/18673935
+osm0031,Wycombe Rye Lido,lido,open,51.62355,-0.7392,South East,Buckinghamshire,High Wycombe,75.94,,,2,way/352619071 relation/21409300
+osm0032,Lido,lido,unclear,51.45978,-2.61133,South West,City of Bristol,Victoria Park,8.07,,Q5133269,1,relation/2395353
+osm0033,Askham Outdoor Swimming Pool,open-air,open,54.60637,-2.75491,North West,Westmorland and Furness,Askham,39.9,,,1,relation/9446514
+osm0034,Millendreath Sea Pool,tidal,open,50.3609,-4.43512,South West,Cornwall,Millendreath,1.3,,,1,way/1002572840
+osm0035,Tarlair Outdoor Swimming Pool (unused),open-air,disused,57.67065,-2.47111,Scotland,Aberdeenshire,Macduff,0.81,,Q7686317,1,way/100787902
+osm0036,Woody Bay Tidal Pool.,tidal,open,51.22458,-3.89461,South West,Devon,Barbrook,0.98,,,1,way/1015921517
+osm0037,Brynamman Lido,lido,unclear,51.8073,-3.87245,Wales,Castell-nedd Port Talbot - Neath Port Talbot,Lower Brynamman,19.54,,,1,way/106164388
+osm0038,Old Outdoor Swimming Pool,open-air,disused,50.95712,0.4943,South East,East Sussex,Mountfield,12.58,,,1,way/1066545504
+osm0039,Aldershot Lido,lido,open,51.23507,-0.74747,South East,Surrey,Tongham,45.39,,,2,way/1074876863 way/37878587
+osm0040,Portishead open air pool,open-air,open,51.49394,-2.7717,South West,North Somerset,Woodhill,0.33,,,2,way/1136151436 way/807597843
+osm0041,Porthtowan Tidal Pool/Rockpool,tidal,open,50.29016,-5.24308,South West,Cornwall,Porthtowan,0.86,,,1,way/1167088793
+osm0042,The Trinkie Outdoor Swimming Pool,open-air,open,58.4288,-3.06999,Scotland,Highland,Broadhaven,0.81,,,1,way/1167920630
+osm0043,Northcroft Lido,lido,open,51.40319,-1.33355,South East,West Berkshire,Speenhamland,54.69,,,1,way/117345000
+osm0044,Brightlingsea Outdoor Swimming Pool,open-air,open,51.80694,1.01753,East of England,Essex,Brightlingsea,0.07,,,1,way/121545000
+osm0045,Tidal Swimming Pool,tidal,unclear,55.35389,-4.79333,Scotland,South Ayrshire,Maidens,0.32,,,1,way/1312881515
+osm0046,Lido,lido,unclear,56.02401,-3.81722,Scotland,Falkirk,South Broomage,5.91,,,1,way/134083457
+osm0047,Lido Park,lido,unclear,52.26617,-2.14552,West Midlands,Worcestershire,Droitwich Spa,56.36,,Q5308243,3,way/135997609 way/1499410905 way/594337586
+osm0048,Bourne Outdoor Swimming Pool,open-air,open,52.76588,-0.37316,East Midlands,Lincolnshire,Bourne,28.45,,,1,way/1391809652
+osm0049,Knaresborough Lido,lido,unclear,53.99758,-1.45166,Yorkshire and the Humber,North Yorkshire,Calcutt,57.83,,,1,way/1532768290
+osm0050,Uxbridge Lido,lido,open,51.55105,-0.4676,London,Greater London,New Denham,56.81,,Q26609412,1,way/165903745
+osm0051,Teignmouth Lido,lido,open,50.54846,-3.49156,South West,Devon,Teignmouth,0.19,,Q7695000,1,way/186441807
+osm0052,Winchester Lido,lido,open,51.06902,-1.31579,South East,Hampshire,Hyde,19.47,,,1,way/227651359
+osm0053,Lido,lido,unclear,53.13913,-1.55551,East Midlands,Derbyshire,Matlock,78.53,,,1,way/228787732
+osm0054,Guildford Lido,lido,open,51.24731,-0.56976,South East,Surrey,Bellfields,49.56,,Q5615833,2,way/23218999 way/698612245
+osm0055,Marbury Park open air pool,open-air,open,53.28354,-2.52528,North West,Cheshire West and Chester,Comberbach,13.71,,,1,way/234966210
+osm0056,Serpentine Lido,lido,open,51.50486,-0.16837,London,Greater London,Knightsbridge,36.63,,,1,way/23607683
+osm0057,Bathing Pool,open-air,open,51.21047,-4.12835,South West,Devon,Ilfracombe,0.28,,,1,way/237497881
+osm0058,Jesus Green Lido,lido,open,52.21299,0.12326,East of England,Cambridgeshire,Cambridge,64.15,1923,Q6188166,1,way/23793778
+osm0059,Petersfield Open Air Pool,open-air,open,51.00435,-0.93203,South East,Hampshire,Petersfield,17.7,,,1,way/239062713
+osm0060,Arundel Lido,lido,open,50.85322,-0.55136,South East,West Sussex,Arundel,5.69,,,1,way/239591586
+osm0061,Bathing Pool,open-air,unclear,51.34424,-0.7576,South East,Surrey,Camberley,57.02,,,1,way/24271783
+osm0062,Hampton Outdoor Swimming Pool,open-air,open,51.4184,-0.35798,London,Greater London,Hampton Hill,48.74,,Q5646271,2,way/25569186 way/359850439
+osm0063,Eversholt Open-Air Pool,open-air,open,51.98364,-0.57209,East of England,Central Bedfordshire,Church End,85.78,,,2,way/269618186 node/1726696391
+osm0064,Bude Sea Pool,tidal,open,50.83264,-4.55403,South West,Cornwall,Crooklets,0.17,,Q4984989,1,way/286684106
+osm0065,Table Rocks Bathing Pool,open-air,unclear,55.04057,-1.43138,North East,North Tyneside,Cullercoats,0.29,,,1,way/288563228
+osm0066,Peterborough Lido,lido,open,52.57,-0.23847,East of England,City of Peterborough,Peterborough,38.81,,Q7178013,2,way/296070764 way/89042519
+osm0067,Cirencester Open Air Swimming Pool,open-air,open,51.71882,-1.97464,South West,Gloucestershire,Cirencester,27.0,,,1,way/301592977
+osm0068,Tinside Lido,lido,open,50.36319,-4.14216,South West,City of Plymouth,West Hoe,0.65,1935,,2,way/30428390 way/316691444
+osm0069,Ilkley Lido,lido,open,53.93207,-1.8205,Yorkshire and the Humber,Bradford,Ilkley,66.72,1935-05-04,Q26672938,2,way/96053641 way/318655889
+osm0070,Stratford Park Lido,lido,open,51.75003,-2.22615,South West,Gloucestershire,Beeches Green,10.2,,,1,way/319296036
+osm0071,Open Air Pool,open-air,open,54.66926,-2.86681,North West,Westmorland and Furness,Greystoke,32.94,,,1,way/327967039
+osm0072,Swimming Pool (Open Air),open-air,open,52.74911,-1.47088,East Midlands,Leicestershire,Ashby-de-la-Zouch,98.11,,,1,way/340954737
+osm0073,Weardale Open Air Pool,open-air,open,54.7482,-2.01379,North East,County Durham,Stanhope,46.14,,,1,way/343694419
+osm0074,Shepton Mallet Lido,lido,open,51.19128,-2.55256,South West,Somerset,Shepton Mallet,29.54,,,1,way/390990977
+osm0075,Sea Pool,tidal,unclear,52.95913,1.07628,East of England,Norfolk,Salthouse,0.09,,,1,way/395667646
+osm0076,Chapel Rock Sea Pool,tidal,open,50.34868,-5.15714,South West,Cornwall,Perranporth,0.01,,,1,way/397510801
+osm0077,Woodgreen Open Air Pool,open-air,open,52.06142,-1.35037,South East,Oxfordshire,Neithrop,74.82,,,1,way/397540044
+osm0078,Bathing pool (disused),open-air,disused,50.34437,-3.53103,South West,Devon,Kingswear,0.32,,,1,way/398406422
+osm0079,Helmsley Open Air Swimming Pool,open-air,open,54.25113,-1.06407,Yorkshire and the Humber,North Yorkshire,Helmsley,38.27,,,1,way/408733770
+osm0080,Parliament Hill Lido,lido,open,51.55647,-0.15127,London,Greater London,Gospel Oak,36.9,,Q7138910,1,way/4264353
+osm0081,Peckham Lido (ruin),lido,disused,51.46352,-0.0655,London,Greater London,Nunhead,29.47,,,1,way/435111500
+osm0082,Gourock Outdoor Swimming Pool (seasonal) and Gym,open-air,open,55.96091,-4.82229,Scotland,Inverclyde,Gourock,0.65,,,1,way/452824816
+osm0083,Stonehaven Open Air Pool,open-air,open,56.96975,-2.20452,Scotland,Aberdeenshire,Cowie,0.78,,Q7619199,1,way/466092168
+osm0084,Lido,lido,unclear,53.60724,-2.28823,North West,Bury,Seedfield,39.16,,,1,way/4947313
+osm0085,North Berwick Tidal Pool,tidal,open,56.06051,-2.7162,Scotland,East Lothian,North Berwick,0.09,,,1,way/62149866
+osm0086,London Fields Lido,lido,open,51.54265,-0.06144,London,Greater London,Dalston,30.84,,,1,way/6637460
+osm0087,Old Bathing Pool Site,open-air,disused,50.85057,0.53769,South East,East Sussex,Harley Shute,0.39,,,1,way/676295791
+osm0088,The Old Lido,lido,disused,53.52846,-1.16822,Yorkshire and the Humber,Doncaster,Cusworth,34.68,,,1,way/75563745
+osm0089,Beccles Lido,lido,open,52.45774,1.56007,East of England,Suffolk,Beccles,11.93,,Q4878530,2,way/849528270 way/849528273
+osm0090,Trevone Bay Sea Pool,tidal,open,50.54373,-4.98364,South West,Cornwall,Trevone,0.49,,,1,way/866722182
+osm0091,Marine Terrace Tidal Pool,tidal,open,51.38804,1.37366,South East,Kent,Margate,0.12,,Q134611596,1,way/93759700
+osm0092,Ware Priory Lido,lido,open,51.81137,-0.03687,East of England,Hertfordshire,Ware,46.9,,,1,way/954042199
+osm0093,Bathing Pool,open-air,unclear,50.52878,-3.83857,South West,Devon,Holne,21.02,,,1,way/958514199
+osm0094,Cellardyke Tidal Pool,tidal,open,56.22779,-2.68018,Scotland,Fife,Kilrenny,0.7,,,1,way/972702155
+osm0095,Letchworth Lido,lido,open,51.98474,-0.22433,East of England,Hertfordshire,Letchworth,67.19,,,1,way/978702743
+osm0096,Walpole Bay Tidal Pool,tidal,open,51.39314,1.40421,South East,Kent,Cliftonville,0.24,,Q26676852,1,way/98464382
+osm0097,Blackpill Lido,lido,open,51.59728,-3.99445,Wales,Abertawe - Swansea,Blackpill,0.31,,,1,way/99004933
+osm0098,Heckington Community Swimming Pool,open-air,open,52.98477,-0.29838,East Midlands,Lincolnshire,Heckington,22.26,,,1,node/13790333650
+osm0099,Tropicana Outdoor Swimming Complex,open-air,open,54.20873,-5.89059,Northern Ireland,,,1.51,,,1,node/1682134713
+osm0100,Shoalstone Pool,open-air,open,50.40127,-3.4989,South West,Torbay,Brixham,0.58,,,1,way/116517519
+osm0101,Castle Pool,open-air,open,56.34188,-2.78885,Scotland,Fife,St Andrews,0.04,,,1,way/1167118081
+osm0102,Rock Pool,tidal,open,51.0408,-4.24309,South West,Devon,Westward Ho!,0.61,,,1,way/130683969
+osm0103,Outdoor Pool,open-air,open,53.02725,-2.19857,West Midlands,City of Stoke-on-Trent,Etruria,47.76,,,1,way/220494435
+osm0104,Jubilee Pool,open-air,open,50.11484,-5.53153,South West,Cornwall,Penzance,0.3,,,1,way/236573354
+osm0105,Park Road Lido,lido,open,51.58284,-0.12987,London,Greater London,Crouch End,36.63,,,1,way/48976187
+osm0106,North Baths,open-air,open,58.44214,-3.07729,Scotland,Highland,Willowbank,0.11,,,1,way/506461063
+osm0107,Devil's Point pool,open-air,open,50.36124,-4.16123,South West,City of Plymouth,Stonehouse,1.19,,,1,way/677126412
+osm0108,Mermaid Pool,open-air,open,50.27916,-3.89759,South West,Devon,Bigbury-on-Sea,0.72,,,1,way/759342411
+osm0109,Outdoor Pool,open-air,open,50.74344,-1.72752,South West,"Bournemouth, Christchurch and Poole",Highcliffe,1.14,,,1,way/949104973
+osm0110,Tynemouth Outdoor Pool,open-air,disused,55.02285,-1.42172,North East,North Tyneside,Tynemouth,0.12,,,1,way/221457325
+osm0111,Grange Lido,lido,disused,54.18719,-2.9121,North West,Westmorland and Furness,Grange-over-Sands,0.42,,,1,way/308312200
