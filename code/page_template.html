@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>The Lido Boom and Bust</title>
+<meta name="description" content="Britain's open-air pools: the 1930s lido boom, the closures of the 1970s to 1990s and the comeback. {{openings.d1930s|int}} of {{openings.n_dated|int}} documented openings came in the 1930s; {{reopenings.n|int}} closed pools have reopened.">
+<meta property="og:title" content="The lido boom and bust: Britain's open-air pools, 1815 to 2026">
+<meta property="og:description" content="{{openings.d1930s|int}} of {{openings.n_dated|int}} dated lido openings came in the 1930s. {{closures.n_1970_1999|int}} of {{closures.n_dated|int}} dated closures came in 1970 to 1999. Then {{reopenings.n|int}} came back.">
+<meta property="og:image" content="https://tristan-hotham.github.io/lido-boom/header.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800;9..144,900&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<style>
+/* Art-deco cream and pool blue. Blue = open and never closed. Gold = closed and came back. Coral = closed. Grey = status unknown. */
+:root{
+  --bg:#F4EFE4; --panel:#E6EEEF; --fg:#14304A; --muted:#5D6D77; --rule:#D5DDDF; --card:#FCFAF4; --border:#B8C7CB;
+  --pool:#2496B0; --poolL:#9FD3DF; --gold:#C98F1E; --coral:#E0603F; --coralL:#F2B3A2; --unk:#9AA6AC; --ink:#14304A; --sea:#E4EEF0;
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0F1D27; --panel:#16283A; --fg:#E8EEF0; --muted:#A3B2BA; --rule:#2A3D4C; --card:#132433; --border:#3B5262;
+  --pool:#4FC0D8; --poolL:#2A6B7C; --gold:#E7B44A; --coral:#F27B5C; --coralL:#8A4434; --unk:#7F8C93; --ink:#9CC7E6; --sea:#0C1820; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0F1D27; --panel:#16283A; --fg:#E8EEF0; --muted:#A3B2BA; --rule:#2A3D4C; --card:#132433; --border:#3B5262;
+  --pool:#4FC0D8; --poolL:#2A6B7C; --gold:#E7B44A; --coral:#F27B5C; --coralL:#8A4434; --unk:#7F8C93; --ink:#9CC7E6; --sea:#0C1820; color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 18px/1.62 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));overflow-x:hidden}
+.wrap{max-width:680px;margin:0 auto;padding-block:28px 64px}
+.wrap .bleed{width:min(1080px,calc(100vw - 32px));margin-left:calc((100% - min(1080px,100vw - 32px))/2);margin-right:0}
+a{color:inherit;text-decoration-color:var(--pool);text-underline-offset:3px}
+.kicker{font:500 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.kicker b{background:var(--pool);color:var(--bg);padding:5px 8px;font-weight:500}
+header.hero{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px 24px;align-items:end;border-bottom:6px double var(--fg);padding-bottom:22px;margin-top:18px}
+h1{font:900 clamp(52px,12.5vw,104px)/.88 var(--display);letter-spacing:-.02em;margin:0;font-variation-settings:"SOFT" 50;color:var(--fg)}
+h1 em{font-style:normal;color:var(--pool)}
+h1 span{color:var(--coral)}
+.mark{width:clamp(92px,21vw,170px);height:auto;display:block}
+.dek{grid-column:1/-1;font-size:21px;line-height:1.42;margin:8px 0 0;max-width:46ch}
+.byline{font:400 13px/1.4 var(--mono);color:var(--muted);margin-top:14px}
+h2{font:800 34px/1.04 var(--display);letter-spacing:-.01em;margin:52px 0 10px;text-wrap:balance}
+h2 .n{font:500 13px/1 var(--mono);color:var(--pool);display:block;letter-spacing:.1em;margin-bottom:10px}
+h3{font:600 20px/1.25 var(--display);margin:28px 0 6px}
+p{margin:0 0 16px}
+.lede::first-letter{font:900 72px/.8 var(--display);float:left;margin:6px 10px 0 0;color:var(--pool)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin:26px 0 8px}
+.stats div{background:var(--card);padding:14px 12px}
+.stats b{display:block;font:900 clamp(28px,6vw,40px)/1 var(--display);color:var(--fg)}
+.stats b.p{color:var(--pool)}.stats b.c{color:var(--coral)}.stats b.g{color:var(--gold)}
+.stats span{font:400 12px/1.35 var(--mono);color:var(--muted);display:block;margin-top:6px}
+@media (max-width:600px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.figure{margin:26px 0 30px}
+.fig-h{font:600 19px/1.25 var(--display);margin:0 0 4px}
+.fig-sub{font:400 13px/1.45 var(--mono);color:var(--muted);margin:0 0 12px}
+.src{font:400 12px/1.45 var(--mono);color:var(--muted);margin-top:10px}
+.chart{width:100%;position:relative}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+svg text{font-family:var(--mono);fill:var(--fg)}
+.lab{font-size:12px}.lab.m{fill:var(--muted)}.lab.b{font-weight:500}.lab.s{font-size:11px}
+.tip{position:absolute;pointer-events:none;background:var(--fg);color:var(--bg);font:400 12px/1.45 var(--mono);padding:8px 10px;border-radius:3px;max-width:270px;z-index:1000;transform:translate(-50%,calc(-100% - 12px));display:none}
+.tip b{font-weight:500}
+.controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:0 0 10px}
+.btn{font:500 12px/1 var(--mono);background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:3px;padding:8px 10px;cursor:pointer;min-height:36px}
+.btn[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.btn[aria-pressed="false"].o{opacity:.55;text-decoration:line-through}
+.btn i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.btn:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--pool);outline-offset:2px}
+.slider{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;align-items:center;margin:0 0 8px}
+.slider input{width:100%;accent-color:var(--pool)}
+.yr{font:800 26px/1.1 var(--display);margin:2px 0 8px}
+.yr small{font:400 13px/1.3 var(--mono);color:var(--muted);display:block;margin-top:4px}
+.search{display:flex;gap:8px;margin:0 0 10px;flex-wrap:wrap}
+.search input{font:400 14px/1 var(--mono);padding:9px 10px;border:1px solid var(--border);background:var(--card);color:var(--fg);border-radius:3px;flex:1 1 220px;min-width:0}
+.mapgrid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:18px;align-items:start}
+@media (max-width:820px){.mapgrid{grid-template-columns:1fr}}
+#map{height:clamp(440px,74vh,680px);border:1px solid var(--border);background:var(--sea);border-radius:2px;z-index:0}
+.legend{display:flex;gap:6px 14px;flex-wrap:wrap;font:400 12px/1.3 var(--mono);color:var(--muted);margin-top:8px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.side{display:flex;flex-direction:column;gap:12px}
+.card{background:var(--card);border:1px solid var(--border);border-left:4px solid var(--pool);padding:12px 14px;font:400 13px/1.5 var(--mono)}
+.card.empty{border-left-color:var(--border);color:var(--muted)}
+.card b.t{font:600 18px/1.2 var(--display);display:block;margin-bottom:6px}
+.card dl{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;margin:6px 0 8px}
+.card dt{color:var(--muted)}.card dd{margin:0;overflow-wrap:anywhere}
+.card q{font-style:italic;color:var(--fg)}
+.pill{display:inline-block;font:500 11px/1 var(--mono);padding:4px 7px;border-radius:10px;color:#fff;margin:0 4px 4px 0}
+.pull{font:600 26px/1.25 var(--display);border-left:6px solid var(--pool);padding:4px 0 4px 18px;margin:30px 0}
+.note{background:var(--panel);border:1px solid var(--rule);padding:14px 16px;font-size:16px;margin:22px 0}
+.note h3{margin-top:0}
+table.t{width:100%;border-collapse:collapse;font:400 13px/1.35 var(--mono)}
+table.t th{text-align:left;font-weight:500;color:var(--muted);border-bottom:2px solid var(--fg);padding:6px 8px 6px 0;vertical-align:bottom;cursor:pointer;position:sticky;top:0;background:var(--bg)}
+table.t td{border-bottom:1px solid var(--rule);padding:7px 8px 7px 0;vertical-align:top}
+table.t td.num,table.t th.num{text-align:right}
+table.t tr{cursor:pointer}
+.tablewrap{overflow-x:auto;max-height:520px;overflow-y:auto;border-bottom:1px solid var(--rule)}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+.cta a{font:500 13px/1 var(--mono);text-decoration:none;border:1px solid var(--fg);padding:11px 14px;border-radius:3px}
+.cta a.p{background:var(--pool);border-color:var(--pool);color:var(--bg)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 18px;padding:0;list-style:none}
+.chips li{font:400 12.5px/1.3 var(--mono);border:1px solid var(--border);background:var(--card);padding:7px 9px;border-radius:14px;cursor:pointer}
+.chips li b{color:var(--gold);font-weight:500}
+.flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:18px 0;font:400 12.5px/1.4 var(--mono)}
+.flow div{background:var(--card);border:1px solid var(--border);padding:12px}
+.flow b{display:block;font:900 30px/1 var(--display);margin-bottom:6px}
+@media (max-width:600px){.flow{grid-template-columns:1fr}}
+footer{border-top:6px double var(--fg);margin-top:56px;padding-top:16px;font:400 13px/1.55 var(--mono);color:var(--muted)}
+footer p{margin:0 0 10px}
+.theme{position:fixed;right:12px;bottom:12px;z-index:1001}
+.leaflet-container{font:400 12px/1.4 var(--mono);background:var(--sea)}
+.leaflet-tooltip{font:400 12px/1.4 var(--mono)}
+.leaflet-control-attribution{background:color-mix(in srgb,var(--card) 85%,transparent)!important;color:var(--muted)!important;font-size:10px}
+.leaflet-control-attribution a{color:var(--fg)!important}
+.leaflet-bar a{background:var(--card);color:var(--fg);border-bottom-color:var(--border)}
+.leaflet-bar a:hover{background:var(--panel)}
+.leaflet-bar{border:1px solid var(--border)!important}
+@media print{.theme,.controls{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="kicker"><b>Data study</b><span>Open-air pools</span><span>Britain, 1815 to 2026</span></div>
+<header class="hero">
+  <h1>The lido <em>boom</em> and <span>bust</span></h1>
+  <svg class="mark" viewBox="-100 -100 200 200" aria-hidden="true"><g id="heroMark"></g></svg>
+  <p class="dek">In the 1930s councils across Britain built open-air pools with fountains, diving stages and sun terraces. From the 1970s they closed by the score. Then, from the 1990s, some came back. I built the best open register of Britain's lidos I could from Wikipedia, Wikidata and OpenStreetMap, and followed each one from opening day to today.</p>
+</header>
+<div class="byline">Dr Tristan Hotham, Independent researcher · October 2026 · Data: Wikipedia; Wikidata; OpenStreetMap; OS Open Names; ONS Census 2021</div>
+
+<div class="stats">
+  <div><b class="p">{{openings.d1930s|int}} of {{openings.n_dated|int}}</b><span>documented lidos with an opening date opened in the 1930s</span></div>
+  <div><b class="c">{{closures.n_1970_1999|int}} of {{closures.n_dated|int}}</b><span>dated closures came between 1970 and 1999</span></div>
+  <div><b class="g">{{reopenings.n|int}}</b><span>closed pools came back; {{reopenings.since_2000|int}} of them since 2000</span></div>
+  <div><b>{{combined.open|int}}</b><span>working open-air pools, lidos and tidal pools I can place on the map today</span></div>
+</div>
+
+<p class="lede">On 31 May {{examples.jubilee.opened|raw}}, Penzance opened a triangular sea-water pool on Battery Rocks, below the town, as part of the celebrations for George V's Silver Jubilee. By August, Wikipedia records, almost {{published.jubilee_1935_visitors|int}} people had been through the turnstiles. Jubilee Pool is still there. It was closed in {{examples.jubilee.closed|raw}}, reopened in {{examples.jubilee.reopened|raw}}, wrecked by storms in 2014, reopened again in 2016 and is now heated from a geothermal well. Its story is the story of the British lido in miniature: a boom, a long decline, and a stubborn comeback.</p>
+<p>Wikipedia's history of lidos in the United Kingdom says that {{published.built_1930s|int}} were built in the 1930s, that hundreds have closed since, and that {{published.open_england|int}} remain open in England. Those are big claims from secondary sources, and there is no open national list that lets anyone check them. So I made one: a register of {{register.n|int}} lidos and open-air pools whose dates or fate I could document from open sources, plus every working open-air pool, lido and tidal pool that OpenStreetMap's mappers have tagged.</p>
+<p>It is not a census. It is a careful sample, and its biases (famous pools and survivors are far better documented than the ones that quietly closed) are spelled out below. But it is enough to see the shape: a boom concentrated in a single decade, a bust concentrated in three, and a revival that is almost entirely a twenty-first century story.</p>
+
+<h2><span class="n">01 · The map</span>Every lido I could document</h2>
+<p>Each dot is a lido or open-air pool. Drag the slider to watch them open and close: a pool appears in the year it opened (or the middle of its decade, if only the decade is known), turns coral while it is shut, and turns gold if it reopened. At 2026 the map adds the working open-air pools that are in OpenStreetMap but not in my register (small dots). Tap a dot for its dates and the source, or search for a place.</p>
+<div class="figure bleed">
+  <div class="slider">
+    <button class="btn" id="play" aria-label="Play through the years">▶</button>
+    <input type="range" id="year" min="1900" max="2026" step="1" value="2026" aria-label="Year">
+  </div>
+  <div class="yr" id="yrLab"></div>
+  <div class="controls" id="filters" role="group" aria-label="Status filters"></div>
+  <div class="search"><input id="q" list="names" placeholder="Find a pool or place, e.g. Tooting" aria-label="Find a pool or place"><datalist id="names"></datalist><button class="btn" id="go">Show</button></div>
+  <div class="mapgrid">
+    <div>
+      <div id="map" role="application" aria-label="Map of documented lidos and open-air pools coloured by status"></div>
+      <div class="legend" id="legend"></div>
+    </div>
+    <div class="side">
+      <div class="card empty" id="card">Tap a dot, search, or pick a comeback below to see a pool's dates, its source and what it is today.</div>
+      <div class="fig-h" style="margin-top:4px">The comebacks</div>
+      <div class="fig-sub" style="margin:0">Closed, campaigned for, reopened</div>
+      <ul class="chips" id="backs" style="margin-top:0;max-height:330px;overflow:auto"></ul>
+    </div>
+  </div>
+  <div class="src">Register: my compilation from English Wikipedia articles, Wikidata and OpenStreetMap tags (each entry cites its source). {{register.approx_positions|int}} entries are placed at the town or district point from OS Open Names because no exact position was available. Extra dots at 2026: OpenStreetMap features named or tagged as open-air pools, lidos or tidal pools (© OpenStreetMap contributors, ODbL).</div>
+</div>
+
+<h2><span class="n">02 · The boom</span>One decade built most of them</h2>
+<p>Outdoor bathing places are much older than the word lido. The oldest pool in the register, Cleveland Pools in Bath, was built in {{published.cleveland_built|raw}}; Clifton's Victoria Baths in Bristol opened in {{examples.clifton.opened|raw}}; Tooting's bathing lake in {{examples.tooting.opened|raw}}. The word itself, Italian for a beach, probably came into English through "Lansbury's Lido", the newspapers' nickname for the Serpentine bathing place in Hyde Park after it was revamped in 1930 and opened to mixed bathing.</p>
+<p>Then came the boom. Of the {{openings.n_dated|int}} pools in the register whose opening year or decade I could document, {{openings.d1930s|int}} ({{openings.share_peak|pct0}}) opened in the 1930s, against {{openings.d1920s|int}} in the 1920s and {{openings.after_1945|int}} after 1945. {{openings.y1935|Words}} opened in 1935 alone, the year of George V's Silver Jubilee, among them Jubilee Pool, Tinside in Plymouth, Hilsea in Portsmouth, Sandford Parks in Cheltenham and Uxbridge. London County Council alone built {{published.lcc_lidos|int}} lidos between 1920 and 1939, according to the Parliament Hill Lido article.</p>
+<div class="figure">
+  <div class="fig-h">When the documented lidos opened, closed and reopened</div>
+  <div class="fig-sub">Pools in the register per decade. Blue: opened. Coral: closed. Gold: reopened.</div>
+  <div class="chart" id="decades"></div>
+  <div class="src">Register entries with a documented year or decade. A pool that closed twice is counted once, at the closure after which it stood empty longest.</div>
+</div>
+<p>These were civic showpieces. New Brighton's pool, opened in 1934, was the largest lido in Britain when it was built and cost £{{published.new_brighton_cost|int}}. Saltdean, with its curved wings and sun deck, was, says its Wikipedia article, hailed as the most innovative design of its type in Britain. On {{published.finchley_record_date|raw}}, Finchley Lido took {{published.finchley_record|int}} visitors in a day, still described as the record for a UK lido. Two of them, Finchley and Aldershot, were venues for the 1948 London Olympics.</p>
+<p class="pull">In the open record, one decade accounts for {{openings.share_peak|pct0}} of all the lido openings anyone has dated.</p>
+
+<h2><span class="n">03 · The bust</span>Three decades of closures</h2>
+<p>The register has a closing year or decade for {{closures.n_dated|int}} pools. {{closures.n_1970_1999|int}} of them ({{closures.share_1970_1999|pct0}}) closed between 1970 and 1999: {{closures.d1970s|int}} in the 1970s, {{closures.d1980s|int}} in the 1980s and {{closures.d1990s|int}} in the 1990s, the worst decade. The pools that closed had typically been open for {{closures.median_years_open|int}} years (median, {{closures.n_years_open|int}} pools with both dates). Wikipedia's history blames cheaper foreign holidays; the individual articles add council cost-cutting, ageing equipment, neglect and the weather. Cleethorpes' bathing pool was wrecked by storms in January 1978, and New Brighton's in 1990.</p>
+<div class="figure">
+  <div class="fig-h">Documented lidos in use, year by year</div>
+  <div class="fig-sub">The {{curve.n|int}} register pools with a known opening date and a known closing date or status. Blue: open that year. Coral: closed that year (and not yet reopened).</div>
+  <div class="chart" id="curve"></div>
+  <div class="src">A pool known only by its opening decade is counted from the middle of the decade. Pools that closed at an unknown date are left out of this chart.</div>
+</div>
+<p>Among the documented pools, the number open peaked at {{curve.peak_open|int}} in {{curve.peak_year|raw}} and fell to a low of {{curve.low_open|int}} in {{curve.low_year|raw}}, when {{curve.max_shut|int}} stood closed. Because the register leans towards pools famous enough to have an article, and survivors are far more likely to be famous, this curve certainly understates the fall. Wikipedia's figures imply that the real decline was much steeper: {{published.built_1930s|int}} built in the 1930s alone, and "hundreds" closed since.</p>
+
+<h2><span class="n">04 · The comeback</span>Campaigns that won</h2>
+<p>Here the register tells a story that the national totals hide. Of the {{fate.ever_closed|int}} pools of known fate that closed at some point, {{fate.closed_then_reopened|int}} ({{fate.share_closed_reopened|pct0}}) have reopened, and {{reopenings.since_2000|int}} of those reopenings came after 2000. The typical comeback took {{reopenings.median_years_shut|int}} years (median of {{reopenings.n_years_shut|int}} with both dates). The longest wait was Reading's Thames Lido, a 1903 Edwardian ladies' pool that closed in 1974 and reopened {{reopenings.max_years_shut|int}} years later, in 2017.</p>
+<div class="figure">
+  <div class="fig-h">Closed and reopened</div>
+  <div class="fig-sub">Each line runs from the year a pool closed (coral) to the year it reopened (gold). Pools without a documented closing year show the reopening only.</div>
+  <div class="chart" id="dumb"></div>
+</div>
+<p>Most of these comebacks followed a local campaign: the Brockwell Lido Users, Save a Lido Today in Droitwich, the Jubilee Pool Association, the Saltdean Lido community interest company, the trust that took over Portishead. Several are now run by charities, community companies or shareholders rather than councils: Jubilee Pool, for example, is owned by about 1,400 local shareholders. Brockwell Lido shows how fragile it can still be: its operator went into administration in April 2026 and the council took it back.</p>
+<div class="flow">
+  <div><b style="color:var(--pool)">{{fate.never_closed_open|int}}</b>documented pools open today with no long closure on record</div>
+  <div><b style="color:var(--gold)">{{fate.closed_then_reopened|int}}</b>closed and came back</div>
+  <div><b style="color:var(--coral)">{{fate.closed_for_good|int}}</b>closed and still closed, demolished or turned into something else</div>
+</div>
+<p>Of the {{thirties.n|int}} documented 1930s lidos, {{thirties.known|int}} have a known fate: {{thirties.open|int}} are open today ({{thirties.open_never_closed|int}} with no long closure on record, {{thirties.open_after_reopening|int}} after a comeback) and {{thirties.closed|int}} are closed. The register holds only about {{thirties.share_of_169|pct0}} of the {{published.built_1930s|int}} that Wikipedia says were built in that decade, and the missing ones are likely to be mostly the ones nobody wrote about, which is to say mostly the closed ones.</p>
+
+<h2><span class="n">05 · Today</span>Where you can still swim outdoors</h2>
+<p>Combining the register with OpenStreetMap, I can place {{combined.open|int}} working open-air pools, lidos and tidal pools in the UK: {{combined.england_open|int}} in England, against the {{published.open_england|int}} that Wikipedia says remain open in England. So the map is a floor, not a count: mappers have not tagged every outdoor pool, and I only kept features whose name or tags say open-air, lido, outdoor or tidal. The pattern is still clear. {{combined.south_open|int}} of the {{combined.open|int}} ({{combined.share_south|pct0}}) are in London, the South East and the South West, and {{combined.share_coastal_open|pct0}} are within 2 km of the sea.</p>
+<div class="figure">
+  <div class="fig-h">Working open-air pools by region</div>
+  <div class="fig-sub">Bar: pools I can place today (register and OpenStreetMap). Number on the right: per million residents (Census 2021, England and Wales).</div>
+  <div class="chart" id="regions"></div>
+  <div class="src">Region from the nearest OS Open Names place. Scotland and Northern Ireland have no per-million figure because their census populations are not in my data.</div>
+</div>
+<p>The South West leads by a distance, with {{combined.sw_open|int}} pools, or {{combined.top_per_million|f1}} per million people, and {{combined.sw_coastal_open|int}} of them are within 2 km of the sea. OpenStreetMap tags {{osm.open_tidal|int}} working tidal and sea pools, basins on the shore that the sea refills, and {{osm.tidal_cornwall|int}} of them are in Cornwall: Bude, Chapel Rock at Perranporth, Millendreath, Porthtowan, Treyarnon and Trevone. Add Jubilee Pool, Tinside, Shoalstone at Brixham, Devil's Point in Plymouth and the Rock Pool at Westward Ho!, and the coast of Devon and Cornwall holds the biggest cluster of outdoor swimming on my map. The North, by contrast, has {{combined.north_open|int}} working pools on my map across three regions; Grange Lido, described in a 2011 Guardian report quoted by Wikipedia as the last remaining lido in the north of England after those at Blackpool, Scarborough and Morecambe were demolished and filled in, closed in {{examples.grange.closed|raw}} and is being repaired as a public space, not a pool.</p>
+<p>London is the other cluster. The register has {{register.london|int}} London entries, {{regions.0.register_opened_1930s|int}} of them opened in the 1930s, more than any other region. Today I can place {{combined.london_open|int}} working London lidos, among them Tooting Bec ({{published.tooting_yards|raw}} yards, the largest pool in England), Parliament Hill, Brockwell, London Fields, Charlton, Hampton and the Serpentine. Victoria Park and Peckham Rye are among those that closed and were demolished.</p>
+
+<h2><span class="n">06 · Limits</span>What this can and cannot show</h2>
+<p><b>This is a documented sample, not a census.</b> The register holds {{register.n|int}} entries; {{register.wikipedia_sourced|int}} draw on Wikipedia text, the rest on Wikidata items or OpenStreetMap tags. There is no open national list of lidos with dates. The best-known compilations (Janet Smith's <i>Liquid Assets</i> for English Heritage, and enthusiasts' lists online) are not open data, and I did not copy them.</p>
+<p><b>Survivors are over-represented.</b> A pool that is open, listed or the subject of a campaign is far more likely to have a Wikipedia article, a Wikidata item or detailed OpenStreetMap tags than one demolished in 1975. That makes the closures and the decline look smaller than they were, and the comebacks look more common. The timing patterns (when pools opened, when they closed) are more trustworthy than the shares.</p>
+<p><b>Dates are as the sources give them.</b> Where articles disagree (Black Rock in Brighton was demolished in 1978 according to one article and 1979 according to another) I note it. "Closed" means the closure after which a pool stood empty longest; several pools have closed more than once. {{register.unknown|int}} entries have an unknown status today.</p>
+<p><b>OpenStreetMap shows mappers, not pools.</b> I kept {{osm.sites|int}} sites named or tagged as open-air pools, lidos or tidal pools; {{osm.open|int}} are tagged as working pools, {{osm.disused|int}} as disused and {{osm.unclear|int}} are named but not tagged clearly enough to tell. Wikidata knows {{wikidata.items|int}} UK items in lido and swimming pool classes, but only {{wikidata.with_inception|int}} have an opening date.</p>
+
+<div class="figure">
+  <div class="fig-h">The register</div>
+  <div class="fig-sub">All {{register.n|int}} entries. Tap a row to see it on the map; tap a column heading to sort.</div>
+  <div class="tablewrap"><table class="t" id="regT"></table></div>
+</div>
+
+<div class="note" id="method">
+  <h3>How I did this</h3>
+  <p><b>Register.</b> I read every lido article and every lido mention in the English Wikipedia extracts I had ({{wikipedia_articles|int}} articles, including the seaside towns and London parks), and wrote down each pool's opening, closing and reopening years with a short quote as evidence. I added Wikidata items in lido and open-air pool classes and OpenStreetMap start dates where they give a year. Each entry has a position from Wikipedia, Wikidata or OpenStreetMap, or failing those the OS Open Names point for the town (flagged as approximate). Status today is what the sources say; where they are silent, OpenStreetMap tags decide, and otherwise it is unknown.</p>
+  <p><b>OpenStreetMap.</b> Features inside the UK whose name contains lido, open-air pool, outdoor pool, bathing pool, tidal pool or sea pool, plus public swimming pools tagged as outdoor, minus cafés, car parks, streets, hotels, holiday parks, schools and private clubs; features within 400 m were merged into one site. A site is working if it has a pool-type tag and nothing marks it disused.</p>
+  <p><b>Geography.</b> Region and nearest place from OS Open Names; coastal means within 2 km of the Natural Earth 1:10m coastline; per-million rates use Census 2021 usual residents.</p>
+</div>
+<div class="cta">
+  <a class="p" href="https://github.com/Tristan-Hotham/lido-boom">Data and code</a>
+  <a href="https://doi.org/10.5281/zenodo.23729646">Paper (Zenodo)</a>
+  <a href="https://tristan-hotham.github.io/seaside-railways/">Did the railway make the seaside?</a>
+  <a href="https://blog.tristanhotham.com/">More history data posts</a>
+</div>
+
+<footer>
+  <p>Dr Tristan Hotham, researcher on social media, campaigns and politics. Independent researcher. ORCID <a href="https://orcid.org/0000-0003-4931-9349">0000-0003-4931-9349</a>.</p>
+  <p>Cite as: Hotham, T. (2026) The lido boom and bust: Britain's open-air pools, 1815 to 2026. Zenodo. <a href="https://doi.org/10.5281/zenodo.23729646">https://doi.org/10.5281/zenodo.23729646</a></p>
+  <p>Sources: English Wikipedia articles (CC BY-SA 4.0), chiefly "History of lidos in the United Kingdom", "Lido (swimming pool)" and the articles on individual lidos and towns named in the register, retrieved October 2026; short quotations are attributed in the data. Wikidata (CC0). OpenStreetMap, © OpenStreetMap contributors, Open Database Licence. OS Open Names, Ordnance Survey, Open Government Licence v3.0; contains OS data © Crown copyright and database right 2026. Census 2021: Office for National Statistics, Open Government Licence v3.0. Coastline: Natural Earth (public domain). Base map tiles © Esri. Map library: Leaflet.</p>
+  <p>Because the register quotes and derives from Wikipedia text (CC BY-SA 4.0) and OpenStreetMap (ODbL), the derived data and the text on this page are released under CC BY-SA 4.0, and the OpenStreetMap-derived tables are also available under the ODbL. Code is MIT.</p>
+  <p>I wrote the text, with drafting and editing assistance from Claude (Anthropic), which also helped prepare the analysis code. I reviewed and checked all text and results.</p>
+</footer>
+</div>
+<div class="tip" id="tip"></div>
+<button class="btn theme" id="theme" aria-label="Toggle dark mode">◐</button>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+/*DATA*/
+const NS = "http://www.w3.org/2000/svg";
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const el = (t, a = {}, p) => { const e = document.createElementNS(NS, t); for (const k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; };
+const fmt = n => n == null ? "" : Math.round(n).toLocaleString("en-GB");
+const tip = document.getElementById("tip");
+function showTip(h, x, y) { tip.innerHTML = h; tip.style.display = "block"; const w = tip.offsetWidth; x = Math.max(w / 2 + 8, Math.min(innerWidth - w / 2 - 8, x)); tip.style.left = x + scrollX + "px"; tip.style.top = y + scrollY + "px"; }
+function hideTip() { tip.style.display = "none"; }
+function hover(node, h) { node.style.cursor = "pointer"; node.setAttribute("tabindex", "0"); const s = () => { const r = node.getBoundingClientRect(); showTip(h, r.left + r.width / 2, r.top); }; node.addEventListener("pointerenter", s); node.addEventListener("focus", s); node.addEventListener("pointerleave", hideTip); node.addEventListener("blur", hideTip); node.addEventListener("click", e => { e.stopPropagation(); s(); }); }
+document.addEventListener("click", hideTip);
+const redraws = [];
+function resp(box, render) { let last = 0; const go = (force) => { const w = Math.max(280, Math.round(box.clientWidth)); if (!force && Math.abs(w - last) < 4) return; last = w; box.innerHTML = ""; render(w, w < 560); }; new ResizeObserver(() => go()).observe(box); redraws.push(() => go(true)); go(); }
+const lbl = (svg, x, y, s, cls = "lab", anchor = "start") => { const t = el("text", { x, y, class: cls, "text-anchor": anchor }, svg); t.textContent = s; return t; };
+const R = D.R, P = D.P, C = P.cols, ROWS = P.rows.map(r => Object.fromEntries(C.map((c, i) => [c, r[i]])));
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const isDark = () => { const r = document.documentElement; return r.dataset.theme ? r.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches; };
+document.getElementById("theme").onclick = () => { const r = document.documentElement; const dark = isDark(); r.dataset.theme = dark ? "light" : "dark"; redraws.forEach(f => f()); window.__restyle && window.__restyle(); };
+/* state of a pool in a given year: null = not yet open (or unknowable), "open", "shut", "back" (open after reopening) */
+const openY = r => r.opened ?? (r.od != null ? r.od + 5 : null);
+const closeY = r => r.closed ?? (r.cd != null ? r.cd + 5 : null) ?? r.cb;
+function stateAt(r, y) {
+  if (r.layer === "osm") return y >= 2026 ? (r.status === "open" ? "osm" : "osmx") : null;
+  const o = openY(r);
+  if (y >= 2026) { if (r.status === "open") return r.reopened ? "back" : "open"; if (r.status === "unknown") return o == null ? "unk" : "unk"; return "shut"; }
+  if (o == null || o > y) return null;
+  const c = closeY(r);
+  if (c != null && c <= y) return (r.reopened && r.reopened <= y) ? "back" : "shut";
+  if (c == null && r.status !== "open" && r.reopened && r.reopened <= y) return "back";
+  return r.status === "unknown" && c == null ? "unk" : "open";
+}
+const ST = ["open", "back", "shut", "unk", "osm"];
+const SLAB = { open: "Open, no long closure on record", back: "Closed, then reopened", shut: "Closed", unk: "Status unknown", osm: "Working pool in OpenStreetMap only", osmx: "Disused (OpenStreetMap)" };
+const SVAR = { open: "--pool", back: "--gold", shut: "--coral", unk: "--unk", osm: "--pool", osmx: "--coral" };
+const yrs = r => [r.opened ? "opened " + r.opened : r.od ? "opened in the " + r.od + "s" : null, r.closed ? "closed " + r.closed : r.cd ? "closed in the " + r.cd + "s" : r.cb ? "closed by " + r.cb : null, r.reopened ? "reopened " + r.reopened : null].filter(Boolean).join(" · ");
+const srcLinks = s => String(s || "").split(/;\s+(?=WP:|Wikidata|OSM)/).map(p => { p = p.trim(); if (p.startsWith("WP:")) { const t = p.slice(3).trim(); return `<a href="https://en.wikipedia.org/wiki/${encodeURIComponent(t.replace(/ /g, "_"))}">Wikipedia: ${esc(t)}</a>`; } if (p.startsWith("Wikidata")) { const q = p.split(" ").pop(); return `<a href="https://www.wikidata.org/wiki/${q}">Wikidata ${q}</a>`; } return esc(p); }).join("; ");
+
+/* hero mark: an art-deco pool seen from above, with a sunburst and a diving board */
+(() => { const g = document.getElementById("heroMark");
+  for (let i = 0; i < 13; i++) { const a = Math.PI + i / 12 * Math.PI; el("line", { x1: 0, y1: -6, x2: Math.cos(a) * 96, y2: -6 + Math.sin(a) * 96, stroke: "var(--gold)", "stroke-width": 3, opacity: .55 }, g); }
+  el("circle", { cx: 0, cy: -6, r: 30, fill: "var(--gold)", opacity: .9 }, g);
+  el("rect", { x: -88, y: -6, width: 176, height: 90, rx: 10, fill: "var(--pool)" }, g);
+  el("rect", { x: -88, y: -6, width: 176, height: 90, rx: 10, fill: "none", stroke: "var(--fg)", "stroke-width": 3 }, g);
+  for (let i = 1; i < 5; i++) el("line", { x1: -88 + i * 35.2, y1: 2, x2: -88 + i * 35.2, y2: 76, stroke: "var(--bg)", "stroke-width": 2, "stroke-dasharray": "5 5", opacity: .8 }, g);
+  for (let k = 0; k < 3; k++) el("path", { d: `M-70 ${22 + k * 20} q 17.5 -8 35 0 t 35 0 t 35 0 t 35 0`, fill: "none", stroke: "var(--bg)", "stroke-width": 2.2, opacity: .5 }, g);
+  el("rect", { x: -16, y: -30, width: 32, height: 7, fill: "var(--coral)" }, g);
+  el("rect", { x: -3, y: -30, width: 6, height: 26, fill: "var(--coral)" }, g);
+})();
+
+/* ===== map ===== */
+(() => {
+  const card = document.getElementById("card"), slider = document.getElementById("year");
+  let year = 2026, show = { open: 1, back: 1, shut: 1, unk: 1, osm: 1 }, sel = null;
+  if (!window.L) document.getElementById("map").innerHTML = '<p style="padding:16px;font:400 13px/1.5 var(--mono)">The map library did not load. The charts below still work.</p>';
+  const map = window.L ? L.map("map", { preferCanvas: true, scrollWheelZoom: false, zoomSnap: .25, minZoom: 4, maxZoom: 15 }).fitBounds([[50.0, -6.0], [58.7, 1.8]]) : null;
+  const CC = {}; const col = v => CC[v] || (CC[v] = css(v));
+  let tiles, lay;
+  const fl = document.getElementById("filters");
+  fl.innerHTML = ST.map(s => `<button class="btn o" data-s="${s}" aria-pressed="true"><i style="background:var(${SVAR[s]})${s === "osm" ? ";transform:scale(.6)" : ""}"></i>${SLAB[s]}</button>`).join("");
+  fl.querySelectorAll("button").forEach(b => b.onclick = () => { const s = b.dataset.s; show[s] = 1 - show[s]; b.setAttribute("aria-pressed", !!show[s]); draw(); });
+  const vis = (st) => st && (show[st === "osmx" ? "shut" : st]);
+  if (map) {
+    map.attributionControl.setPrefix('<a href="https://leafletjs.com">Leaflet</a>');
+    map.on("focus", () => map.scrollWheelZoom.enable()); map.on("blur", () => map.scrollWheelZoom.disable());
+    const tileUrl = () => `https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/${isDark() ? "World_Dark_Gray_Base" : "World_Light_Gray_Base"}/MapServer/tile/{z}/{y}/{x}`;
+    tiles = L.tileLayer(tileUrl(), { maxZoom: 15, attribution: 'Tiles &copy; Esri · Pools: Wikipedia, Wikidata, &copy; OpenStreetMap contributors (ODbL) · Places: OS Open Names (OGL)' }).addTo(map);
+    map.createPane("pts"); map.getPane("pts").style.zIndex = 430;
+    const rr = L.canvas({ pane: "pts", padding: .3, tolerance: 5 });
+    lay = L.layerGroup().addTo(map);
+    window.__draw = () => { lay.clearLayers();
+      const zs = map.getZoom() < 6 ? .7 : map.getZoom() < 8 ? .9 : 1.1;
+      ROWS.map((r, i) => [r, i, stateAt(r, year)]).filter(x => vis(x[2])).sort((a, b) => (a[0].layer === "osm") - (b[0].layer === "osm")).reverse().forEach(([r, i, st]) => {
+        const c = col(SVAR[st]), small = r.layer === "osm";
+        const m = L.circleMarker([r.lat, r.lon], { renderer: rr, radius: (small ? 3.4 : 6) * zs, weight: st === "unk" ? 1.6 : 1, color: small ? c : col("--fg"), opacity: small ? .9 : .6,
+          fillColor: c, fillOpacity: st === "unk" ? .35 : small ? .55 : .92, dashArray: r.status === "temporarily closed" && year >= 2026 ? "2 2" : null });
+        m.bindTooltip(`<b>${esc(r.name)}</b>${r.place ? " · " + esc(r.place) : ""}<br>${SLAB[st].toLowerCase()}${yrs(r) ? " · " + yrs(r) : ""}`, { direction: "top" }).on("click", () => showCard(i)).addTo(lay); });
+      if (sel != null) L.circleMarker([ROWS[sel].lat, ROWS[sel].lon], { renderer: rr, radius: 12, weight: 3, color: col("--ink"), fill: false, interactive: false }).addTo(lay);
+    };
+    window.__restyle = () => { for (const k in CC) delete CC[k]; tiles.setUrl(tileUrl()); window.__draw(); };
+    map.on("zoomend", () => window.__draw());
+    matchMedia("(prefers-color-scheme: dark)").addEventListener("change", window.__restyle);
+  }
+  function draw() {
+    const reg = ROWS.filter(r => r.layer === "register").map(r => stateAt(r, year));
+    const o = reg.filter(s => s === "open" || s === "back").length, sh = reg.filter(s => s === "shut").length;
+    const extra = year >= 2026 ? ` · plus ${fmt(ROWS.filter(r => r.layer === "osm" && r.status === "open").length)} working pools from OpenStreetMap` : "";
+    document.getElementById("yrLab").innerHTML = `${year >= 2026 ? "Today" : year} <small>${fmt(o)} documented pools open${sh ? ", " + fmt(sh) + " closed" : ""}${extra}</small>`;
+    legend(); if (map) window.__draw(); }
+  function legend() { document.getElementById("legend").innerHTML = ST.map(s => `<span><i style="background:var(${SVAR[s]})${s === "unk" ? ";opacity:.5" : ""}${s === "osm" ? ";transform:scale(.6)" : ""}"></i>${SLAB[s]}</span>`).join("") + `<span>Dashed: temporarily closed</span>`; }
+  function showCard(i) { sel = i; const r = ROWS[i]; const st = stateAt(r, 2026); card.className = "card"; card.style.borderLeftColor = `var(${SVAR[st]})`;
+    card.innerHTML = `<b class="t">${esc(r.name)}</b><div style="color:var(--muted)">${esc(r.place)}${r.region ? " · " + esc(r.region) : ""}</div>` +
+      `<div style="margin:8px 0 2px"><span class="pill" style="background:var(${SVAR[st]})">${r.status === "temporarily closed" ? "Temporarily closed" : SLAB[st]}</span>${r.water ? `<span class="pill" style="background:var(--muted)">${esc({ fresh: "fresh water", sea: "sea water", tidal: "tidal", brine: "brine", lake: "lake" }[r.water] || r.water)}</span>` : ""}${r.setting === "coastal" ? '<span class="pill" style="background:var(--ink)">coastal</span>' : ""}</div><dl>` +
+      (r.layer === "register" ? `<dt>Opened</dt><dd>${r.opened || (r.od ? r.od + "s" : "not documented")}</dd>` +
+        `<dt>Closed</dt><dd>${r.closed || (r.cd ? r.cd + "s" : r.cb ? "by " + r.cb : (r.status === "open" && !r.reopened ? "never for long" : "not documented"))}</dd>` +
+        (r.reopened ? `<dt>Reopened</dt><dd>${r.reopened}</dd>` : "") +
+        `<dt>Source</dt><dd>${srcLinks(r.src)}</dd>` + (r.ev ? `<dt>Says</dt><dd><q>${esc(r.ev)}</q></dd>` : "") + (r.notes ? `<dt>Note</dt><dd>${esc(r.notes)}</dd>` : "") +
+        (r.pos ? `<dt>Position</dt><dd>approximate (town point)</dd>` : "")
+        : `<dt>Source</dt><dd>OpenStreetMap (${r.kind === "tidal" ? "tidal or sea pool" : r.kind === "lido" ? "named lido" : "open-air pool"}); no dates</dd>`) + `</dl>`;
+    if (map) window.__draw(); }
+  window.__show = (i, zoom = true) => { year = 2026; slider.value = 2026; draw(); showCard(i); if (map && zoom) map.flyTo([ROWS[i].lat, ROWS[i].lon], 12, { duration: reduce ? 0 : .7 }); document.getElementById("map").scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" }); };
+  slider.oninput = e => { year = +e.target.value; draw(); };
+  let timer = null; const play = document.getElementById("play");
+  play.onclick = () => { if (timer) { clearInterval(timer); timer = null; play.textContent = "▶"; return; } if (year >= 2026) year = 1900; play.textContent = "❚❚";
+    timer = setInterval(() => { year = Math.min(2026, year + 1); slider.value = year; draw(); if (year >= 2026) { clearInterval(timer); timer = null; play.textContent = "▶"; } }, reduce ? 400 : 90); };
+  const dl = document.getElementById("names"), key = r => `${r.name}${r.place ? ", " + r.place : ""}`;
+  dl.innerHTML = ROWS.map(r => `<option value="${esc(key(r))}">`).join("");
+  const find = () => { const q = document.getElementById("q").value.trim().toLowerCase(); if (!q) return; let i = ROWS.findIndex(r => key(r).toLowerCase() === q); if (i < 0) i = ROWS.findIndex(r => key(r).toLowerCase().includes(q)); if (i >= 0) window.__show(i); };
+  document.getElementById("go").onclick = find; document.getElementById("q").addEventListener("keydown", e => { if (e.key === "Enter") find(); });
+  const u = document.getElementById("backs");
+  u.innerHTML = ROWS.map((r, i) => [r, i]).filter(([r]) => r.reopened).sort((a, b) => a[0].reopened - b[0].reopened).map(([r, i]) => `<li data-i="${i}"><b>${r.reopened}</b> · ${esc(r.name.replace(/ \(.*\)/, ""))}</li>`).join("");
+  u.querySelectorAll("li").forEach(li => li.onclick = () => window.__show(+li.dataset.i));
+  draw();
+})();
+
+/* ===== decades ===== */
+resp(document.getElementById("decades"), (W, nar) => {
+  const V = R.decades, m = { l: 34, r: 10, t: 18, b: 34 }, Ht = nar ? 250 : 290, svg = el("svg", { viewBox: `0 0 ${W} ${Ht}`, role: "img", "aria-label": "Documented lido openings, closures and reopenings per decade, 1900s to 2020s" }, document.getElementById("decades"));
+  const mx = Math.max(...V.map(d => Math.max(d.opened, d.closed, d.reopened))) + 2, gw = (W - m.l - m.r) / V.length, Y = v => Ht - m.b - v / mx * (Ht - m.t - m.b);
+  for (let t = 0; t <= mx; t += 10) { el("line", { x1: m.l, x2: W - m.r, y1: Y(t), y2: Y(t), stroke: "var(--rule)" }, svg); lbl(svg, m.l - 6, Y(t) + 4, t, "lab m s", "end"); }
+  const bw = gw * .26;
+  V.forEach((d, i) => { const x = m.l + i * gw + gw * .1;
+    [["opened", "--pool"], ["closed", "--coral"], ["reopened", "--gold"]].forEach(([k, c], j) => { if (d[k]) el("rect", { x: x + j * bw, y: Y(d[k]), width: bw * .92, height: Y(0) - Y(d[k]), fill: `var(${c})` }, svg); });
+    const hit = el("rect", { x: m.l + i * gw, y: m.t, width: gw, height: Ht - m.t - m.b, fill: "transparent" }, svg);
+    hover(hit, `<b>${d.decade}s</b><br>${d.opened} opened · ${d.closed} closed · ${d.reopened} reopened`);
+    if (!nar || i % 2 === 0) lbl(svg, m.l + i * gw + gw / 2, Ht - m.b + 15, (nar ? "'" + String(d.decade).slice(2) : d.decade + "s"), "lab s m", "middle"); });
+  const pk = V.find(d => d.decade === R.openings.peak_decade), i = V.indexOf(pk);
+  lbl(svg, m.l + i * gw + gw * .1 + bw + 6, Y(pk.opened) + 4, `${pk.opened} opened in the 1930s`, "lab s b");
+  lbl(svg, m.l, 10, "pools per decade", "lab m s");
+});
+
+/* ===== curve ===== */
+resp(document.getElementById("curve"), (W, nar) => {
+  const V = P.curve, m = { l: 34, r: 12, t: 18, b: 30 }, Ht = nar ? 240 : 280, svg = el("svg", { viewBox: `0 0 ${W} ${Ht}`, role: "img", "aria-label": "Documented lidos open and closed each year, 1900 to 2026" }, document.getElementById("curve"));
+  const mx = 45, X = y => m.l + (y - 1900) / 126 * (W - m.l - m.r), Y = v => Ht - m.b - v / mx * (Ht - m.t - m.b);
+  [0, 10, 20, 30, 40].forEach(t => { el("line", { x1: m.l, x2: W - m.r, y1: Y(t), y2: Y(t), stroke: "var(--rule)" }, svg); lbl(svg, m.l - 6, Y(t) + 4, t, "lab m s", "end"); });
+  const area = (k, base) => "M" + V.map(c => `${X(c.year).toFixed(1)} ${Y(base(c) + c[k]).toFixed(1)}`).join("L") + "L" + V.slice().reverse().map(c => `${X(c.year).toFixed(1)} ${Y(base(c)).toFixed(1)}`).join("L") + "Z";
+  el("path", { d: area("open", () => 0), fill: "var(--pool)", opacity: .85 }, svg);
+  el("path", { d: area("shut", c => c.open), fill: "var(--coral)", opacity: .75 }, svg);
+  [1900, 1925, 1950, 1975, 2000, 2025].forEach(y => lbl(svg, X(y), Ht - m.b + 15, y, "lab s m", "middle"));
+  const pk = V.find(c => c.year === R.curve.peak_year), lo = V.find(c => c.year === R.curve.low_year);
+  lbl(svg, X(pk.year), Y(pk.open + pk.shut) - 8, `${pk.year}: ${pk.open} open`, "lab s b", "middle");
+  lbl(svg, X(lo.year), Y(lo.open) + 16, `${lo.year}: ${lo.open} open`, "lab s b", "middle");
+  lbl(svg, X(lo.year), Y(lo.open + lo.shut) - 8, `${lo.shut} closed`, "lab s", "middle");
+  V.forEach(c => { if (c.year % 2) return; const hit = el("rect", { x: X(c.year) - 3, y: m.t, width: 6, height: Ht - m.t - m.b, fill: "transparent" }, svg); hover(hit, `<b>${c.year}</b><br>${c.open} open · ${c.shut} closed`); });
+  lbl(svg, m.l, 10, "documented pools", "lab m s");
+});
+
+/* ===== dumbbells ===== */
+resp(document.getElementById("dumb"), (W, nar) => {
+  const V = R.reopenings.list, rowH = 24, m = { l: nar ? 128 : 220, r: 14, t: 10, b: 28 }, Ht = m.t + m.b + V.length * rowH, svg = el("svg", { viewBox: `0 0 ${W} ${Ht}`, role: "img", "aria-label": "Years each reopened lido was closed" }, document.getElementById("dumb"));
+  const X = y => m.l + (y - 1970) / 56 * (W - m.l - m.r);
+  [1970, 1980, 1990, 2000, 2010, 2020].forEach(y => { el("line", { x1: X(y), x2: X(y), y1: m.t, y2: Ht - m.b, stroke: "var(--rule)" }, svg); lbl(svg, X(y), Ht - m.b + 16, y, "lab s m", "middle"); });
+  V.forEach((d, i) => { const y = m.t + i * rowH + rowH / 2, nm = d.name.replace(/ \(.*\)/, "");
+    lbl(svg, m.l - 8, y + 4, nar && nm.length > 17 ? nm.slice(0, 16) + "." : nm, "lab s", "end");
+    if (d.closed) { el("line", { x1: X(d.closed), x2: X(d.reopened), y1: y, y2: y, stroke: "var(--muted)", "stroke-width": 2 }, svg); el("circle", { cx: X(d.closed), cy: y, r: 5, fill: "var(--coral)" }, svg); }
+    el("circle", { cx: X(d.reopened), cy: y, r: 5, fill: "var(--gold)" }, svg);
+    const hit = el("rect", { x: 0, y: y - rowH / 2, width: W, height: rowH, fill: "transparent" }, svg);
+    hover(hit, `<b>${esc(d.name)}</b><br>${d.closed ? "closed " + d.closed + " · " : ""}reopened ${d.reopened}${d.closed ? " · " + (d.reopened - d.closed) + " years shut" : ""}`); });
+});
+
+/* ===== regions ===== */
+resp(document.getElementById("regions"), (W, nar) => {
+  const V = R.regions, rowH = 26, m = { l: nar ? 112 : 190, r: 58, t: 6, b: 6 }, Ht = m.t + m.b + V.length * rowH, svg = el("svg", { viewBox: `0 0 ${W} ${Ht}`, role: "img", "aria-label": "Working open-air pools by region" }, document.getElementById("regions"));
+  const mx = Math.max(...V.map(d => d.open_sites)), X = v => m.l + v / mx * (W - m.l - m.r - 30);
+  const short = { "Yorkshire and the Humber": "Yorkshire", "East of England": "East", "Northern Ireland": "N. Ireland" };
+  V.forEach((d, i) => { const y = m.t + i * rowH;
+    lbl(svg, m.l - 8, y + 17, nar ? (short[d.region] || d.region) : d.region, "lab s", "end");
+    el("rect", { x: m.l, y: y + 5, width: Math.max(1, X(d.open_sites) - m.l), height: 15, fill: d.region === "South West" ? "var(--pool)" : "var(--poolL)" }, svg);
+    lbl(svg, X(d.open_sites) + 5, y + 17, d.open_sites, "lab s b");
+    if (d.open_per_million !== "") lbl(svg, W - 2, y + 17, d.open_per_million.toFixed(1), "lab s m", "end");
+    const hit = el("rect", { x: 0, y, width: W, height: rowH, fill: "transparent" }, svg);
+    hover(hit, `<b>${d.region}</b><br>${d.open_sites} working open-air pools · ${d.closed_sites} closed on the map${d.open_per_million !== "" ? "<br>" + d.open_per_million.toFixed(1) + " per million residents" : ""}<br>${d.register_entries} register entries, ${d.register_opened_1930s} opened in the 1930s`); });
+});
+
+/* ===== register table ===== */
+(() => {
+  const T = document.getElementById("regT");
+  const rows = ROWS.map((r, i) => ({ r, i })).filter(x => x.r.layer === "register");
+  const cols = [["Pool", x => x.r.name, 0], ["Place", x => x.r.place, 0], ["Opened", x => x.r.opened || (x.r.od ? x.r.od + "s" : ""), 1], ["Closed", x => x.r.closed || (x.r.cd ? x.r.cd + "s" : x.r.cb ? "by " + x.r.cb : ""), 1], ["Reopened", x => x.r.reopened || "", 1], ["Today", x => x.r.status, 0]];
+  let sk = 2, asc = true;
+  const render = () => {
+    const sorted = rows.slice().sort((a, b) => { const va = cols[sk][1](a), vb = cols[sk][1](b); const na = parseInt(String(va).replace("by ", "")), nb = parseInt(String(vb).replace("by ", ""));
+      const c = cols[sk][2] ? ((isNaN(na) ? 9999 : na) - (isNaN(nb) ? 9999 : nb)) : String(va).localeCompare(String(vb)); return asc ? c : -c; });
+    T.innerHTML = "<thead><tr>" + cols.map((c, j) => `<th class="${c[2] ? "num" : ""}" data-j="${j}">${c[0]}${j === sk ? (asc ? " ▲" : " ▼") : ""}</th>`).join("") + "</tr></thead><tbody>" +
+      sorted.map(x => `<tr data-i="${x.i}">` + cols.map(c => `<td class="${c[2] ? "num" : ""}">${esc(c[1](x))}</td>`).join("") + "</tr>").join("") + "</tbody>";
+    T.querySelectorAll("th").forEach(th => th.onclick = () => { const j = +th.dataset.j; if (j === sk) asc = !asc; else { sk = j; asc = true; } render(); });
+    T.querySelectorAll("tbody tr").forEach(tr => tr.onclick = () => window.__show(+tr.dataset.i));
+  };
+  render();
+})();
+</script>
+</body>
+</html>

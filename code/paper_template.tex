@@ -1,0 +1,180 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Pagella}
+\newfontfamily\headfont{Inter}[UprightFont=*-ExtraBold,BoldFont=*-ExtraBold,Extension=.otf,Path=/usr/share/fonts/opentype/inter/]
+\usepackage[a4paper,margin=2.3cm]{geometry}
+\usepackage{graphicx,booktabs,float,caption,array}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{setspace}
+\setstretch{1.05}
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{0.75}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+\titleformat{\section}{\headfont\Large}{\thesection}{0.8em}{}
+\titleformat{\subsection}{\headfont\large}{\thesubsection}{0.8em}{}
+\captionsetup{font=small,labelfont=bf}
+\urlstyle{same}
+\hypersetup{pdftitle={The Lido Boom and Bust: Britain's Open-Air Pools, 1815 to 2026},pdfauthor={Tristan Hotham}}
+
+\begin{document}
+\begin{center}
+{\Large\bfseries The Lido Boom and Bust:\\[2pt] Britain's Open-Air Pools, 1815 to 2026\par}
+\vspace{1.2em}
+{\large Tristan Hotham\par}
+\vspace{0.3em}
+{\small Independent researcher\\
+ORCID: 0000-0003-4931-9349\\
+DOI: \href{https://doi.org/10.5281/zenodo.23729646}{https://doi.org/10.5281/zenodo.23729646}\par}
+\vspace{0.8em}
+2026
+\end{center}
+
+\begin{quote}
+\small
+\begin{center}\textbf{Abstract}\end{center}
+Britain's open-air swimming pools are usually described in three acts: a boom of municipal lidos in the 1930s, decline and closure from the 1970s, and a revival driven by local campaigns. There is, however, no open national dataset against which to test that story. I build one from open sources: a register of {{register.n|int}} lidos and open-air pools whose dates or fate can be documented from English Wikipedia text, Wikidata and OpenStreetMap, each entry citing its evidence, together with an inventory of {{osm.sites|int}} open-air pool sites in OpenStreetMap. Of the {{openings.n_dated|int}} register pools with a documented opening year or decade, {{openings.d1930s|int}} ({{openings.share_peak|pct0}}) opened in the 1930s, {{openings.y1935|int}} in 1935 alone. Of {{closures.n_dated|int}} dated closures, {{closures.n_1970_1999|int}} ({{closures.share_1970_1999|pct0}}) fell between 1970 and 1999, after a median of {{closures.median_years_open|int}} years of use. Of the {{fate.ever_closed|int}} pools of known fate that closed at some point, {{fate.closed_then_reopened|int}} ({{fate.share_closed_reopened|pct0}}) reopened, {{reopenings.since_2000|int}} of them after 2000, after a median of {{reopenings.median_years_shut|int}} years shut. Combining the register with OpenStreetMap places {{combined.open|int}} working open-air pools, lidos and tidal pools in the UK, {{combined.share_south|pct0}} of them in London, the South East and the South West and {{combined.share_coastal_open|pct0}} within 2 km of the sea. The register is a documented sample biased towards survivors, so it understates the decline and overstates the comeback; the timing of openings and closures is its most robust result. The data, code and an interactive map are openly available.
+
+\textbf{Keywords:} lidos; open-air swimming pools; tidal pools; leisure history; interwar Britain; municipal amenities; heritage campaigns; OpenStreetMap; Wikipedia; open data
+\end{quote}
+
+\section{Introduction}
+
+The lido is one of the most recognisable buildings of interwar Britain: a large open-air pool, often with fountains, diving stages, terraces for sunbathing and a café, built by a local council in a park or on a seafront. Wikipedia's history of lidos in the United Kingdom, drawing on a 2003 newspaper report, says that 169 were built in the 1930s; that many closed when foreign holidays became cheaper; that ``hundreds'' have closed since; and that 127 remain open in England (Wikipedia contributors 2026a). The standard account, set out at book length by Janet Smith for English Heritage (Smith 2005), adds a revival from the 1990s, as local campaigns rescued and reopened pools that councils had closed.
+
+That story is told mostly through individual pools. There is no open national list of lidos with their opening and closing dates against which the overall shape of the boom, the bust and the comeback can be checked. This note builds the best open register I could from sources that anyone can reuse, and asks four questions of it. When did Britain's documented lidos open? When did they close, and after how long? How many came back, and when? And where can people still swim outdoors today?
+
+It is one of a series of open-data history studies; an interactive version with a map, a year slider and the full register is at \url{https://tristan-hotham.github.io/lido-boom/}.
+
+\section{Data}
+
+\subsection{The register}
+
+The core of the study is a hand-built register of {{register.n|int}} lidos and open-air pools in the United Kingdom. I searched an extract of {{wikipedia_articles|int}} English Wikipedia articles (Wikipedia contributors 2026b) for mentions of lidos, open-air or outdoor pools, bathing pools, tidal pools and sea pools. The extract contains the articles on individual lidos (for example Brockwell Lido, Tinside Lido, Saltdean Lido and Cleveland Pools), the two general articles ``History of lidos in the United Kingdom'' and ``Lido (swimming pool)'', and several hundred articles on seaside towns, London parks and other places collected for earlier studies. I read each mention and recorded, where the text gave them, the year (or decade) a pool opened, the year it closed, the year it reopened and its status today, with a short quotation or close paraphrase as evidence and the article as source. {{register.wikipedia_sourced|int}} register entries draw on Wikipedia text.
+
+I added Wikidata items (Wikidata contributors 2026) in the classes lido, outdoor swimming pool, open-air swimming pool, tidal pool, sea pool and bathing pool, and a few generic swimming pool items that are clearly outdoor or seawater pools. Wikidata knows {{wikidata.items|int}} UK items in lido and swimming pool classes, but only {{wikidata.with_inception|int}} have an inception date, so Wikidata contributes mainly positions and a few opening years. OpenStreetMap \texttt{start\_date} tags give two more opening years.
+
+Each entry has a position from, in order of preference, the coordinates of its Wikipedia article, its Wikidata item, or a matching OpenStreetMap feature. Where none was available, I used the OS Open Names point of the town or district the source names (Ordnance Survey 2026); {{register.approx_positions|int}} entries are placed this way and flagged as approximate. Region and nearest place come from the nearest OS Open Names populated place, and ``coastal'' means within 2 km of the Natural Earth 1:10m coastline.
+
+\subsection{OpenStreetMap}
+
+OpenStreetMap (OpenStreetMap contributors 2026) supplies the present-day picture. From a QLever extract of features inside the UK retrieved on 28 October 2026, I kept features whose name contains lido, open-air pool, outdoor pool, bathing pool, tidal pool or sea pool; public-access swimming pools tagged as outdoor; and features tagged as disused, abandoned or former swimming pools with such a name. I removed cafés, car parks, streets, shops, hotels, holiday parks, schools, private clubs, paddling pools and hot tubs, and merged features within 400 m into one site. This leaves {{osm.sites|int}} sites from {{osm.features|int}} features: {{osm.open|int}} tagged as working pools, {{osm.disused|int}} as disused and {{osm.unclear|int}} named as lidos or pools but without tags clear enough to tell whether they still hold water.
+
+\section{Methods}
+
+\textbf{Dates.} Opening is the year a pool first opened to the public as given by the source; where only a decade is given (``built in the 1930s''), I record the decade. Several pools have closed more than once; ``closed'' is the closure after which the pool stood empty longest, and ``reopened'' the end of that closure. Wartime closures are noted but not counted. Two pools are known only to have closed by a given year, because something else had been built on the site; they count as closed but not in the closure decades.
+
+\textbf{Status today.} Status in 2026 is what the sources say. Where they are silent and a working pool is mapped in OpenStreetMap at the same spot, the pool is counted as open; otherwise its status is unknown ({{register.unknown|int}} entries). Cleveland Pools, reopened in 2022 and closed by flood damage in January 2024, is counted as temporarily closed.
+
+\textbf{Timeline.} For the year-by-year count of documented pools in use I take the {{curve.n|int}} register entries with a known opening year or decade and either a closing year or decade or a definite status; pools known only by decade are counted from the middle of the decade, and pools that closed at an unknown date are left out.
+
+\textbf{Today's map.} The working open-air pools on the map are the register entries that are open, plus OpenStreetMap sites tagged as working that are not linked to a register entry (within 400 m). Rates per million residents use Census 2021 usual residents for the English regions and Wales (Office for National Statistics 2022); Scotland and Northern Ireland have no comparable figure in my data.
+
+\section{Results}
+
+\subsection{The boom}
+
+Table~\ref{tab:summary} summarises the register. Of the {{openings.n_dated|int}} pools with a documented opening year or decade, {{openings.d1930s|int}} ({{openings.share_peak|pct0}}) opened in the 1930s, against {{openings.d1920s|int}} in the 1920s, {{openings.d1900s_1910s|int}} in 1900 to 1919, {{openings.before_1900|int}} before 1900 and {{openings.after_1945|int}} after 1945 (Figure~\ref{fig:decades}). {{openings.y1935|Words}} opened in 1935, the year of George V's Silver Jubilee, which gave Penzance's Jubilee Pool its name. The oldest pools in the register are Cleveland Pools in Bath, built in {{published.cleveland_built|raw}}, and Clifton's Victoria Baths in Bristol, opened in {{examples.clifton.opened|raw}}. The word lido itself probably reached English through ``Lansbury's Lido'', the press nickname for the Serpentine bathing place in Hyde Park after it was revamped in 1930 (Wikipedia contributors 2026c).
+
+{{TABLE_SUMMARY}}
+
+\begin{figure}[tbp]\centering
+\includegraphics[width=0.88\textwidth]{f_decades.png}
+\caption{Register pools opened, closed and reopened per decade, 1900s to 2020s. A pool that closed more than once is counted at the closure after which it stood empty longest.}\label{fig:decades}
+\end{figure}
+
+London dominates the documented boom: {{regions.0.register_opened_1930s|int}} of the {{openings.d1930s|int}} 1930s openings are in London, where, according to the Parliament Hill Lido article, the London County Council alone built {{published.lcc_lidos|int}} lidos between 1920 and 1939. Seaside towns built some of the largest: New Brighton's pool, opened in 1934, was the largest lido in Britain when it was built.
+
+\subsection{The bust}
+
+The register has a closing year or decade for {{closures.n_dated|int}} pools. {{closures.n_1970_1999|int}} of them ({{closures.share_1970_1999|pct0}}) closed between 1970 and 1999: {{closures.d1970s|int}} in the 1970s, {{closures.d1980s|int}} in the 1980s and {{closures.d1990s|int}} in the 1990s. A further {{closures.d2000s|int}} closed in the 2000s and {{closures.d2010s|int}} in the 2010s. For the {{closures.n_years_open|int}} pools with both an opening and a closing year, the median time in use before closure was {{closures.median_years_open|int}} years. The sources give a range of reasons: cheaper foreign holidays in the general history, council cost-cutting (Brockwell, 1990), ageing equipment and neglect (Hilsea, Tinside) and storms (Cleethorpes, 1978; New Brighton, 1990).
+
+Figure~\ref{fig:curve} turns the register into a count of documented pools in use each year. The number open peaked at {{curve.peak_open|int}} in {{curve.peak_year|raw}} and fell to {{curve.low_open|int}} in {{curve.low_year|raw}}, when {{curve.max_shut|int}} of the {{curve.n|int}} pools in the timeline stood closed; in 2026 the figure is {{curve.open_2026|int}}. Because survivors are much more likely to be documented, this curve certainly understates the national decline.
+
+\begin{figure}[tbp]\centering
+\includegraphics[width=0.88\textwidth]{f_curve.png}
+\caption{Documented pools open (solid) and closed but not yet reopened (hatched) each year, 1900 to 2026, for the {{curve.n|int}} register entries with a usable timeline.}\label{fig:curve}
+\end{figure}
+
+\subsection{The comeback}
+
+Of the {{fate.known|int}} register entries whose status today is known, {{fate.ever_closed|int}} closed at some point. {{fate.closed_then_reopened|int}} of these ({{fate.share_closed_reopened|pct0}}) have reopened, and {{fate.closed_for_good|int}} remain closed, demolished or converted to other uses. Table~\ref{tab:reopen} and Figure~\ref{fig:comeback} list the reopenings. Two came in the 1990s (Brockwell and Jubilee Pool, both in 1994), {{reopenings.d2000s|int}} in the 2000s, {{reopenings.d2010s|int}} in the 2010s and {{reopenings.d2020s|int}} in the 2020s. The median closure before reopening lasted {{reopenings.median_years_shut|int}} years; the longest was Reading's Thames Lido, a 1903 pool closed in 1974 and reopened {{reopenings.max_years_shut|int}} years later in 2017. Most reopenings followed a local campaign, and several pools are now run by trusts, community interest companies or shareholders rather than councils.
+
+{{TABLE_REOPEN}}
+
+\begin{figure}[tbp]\centering
+\includegraphics[width=0.8\textwidth]{f_comeback.png}
+\caption{Pools that closed and reopened: year of closure (square) and reopening (diamond). London Fields, Droitwich and Portishead have no documented closing year.}\label{fig:comeback}
+\end{figure}
+
+Of the {{thirties.n|int}} register pools opened in the 1930s, {{thirties.known|int}} have a known fate: {{thirties.open|int}} are open today ({{thirties.open_never_closed|int}} with no long closure on record and {{thirties.open_after_reopening|int}} after reopening) and {{thirties.closed|int}} are closed. The register contains only about {{thirties.share_of_169|pct0}} of the 169 lidos said to have been built in that decade.
+
+\subsection{Where people swim outdoors today}
+
+Combining open register entries with OpenStreetMap sites, I can place {{combined.open|int}} working open-air pools, lidos and tidal pools in the UK, {{combined.england_open|int}} of them in England (Figure~\ref{fig:map}, Table~\ref{tab:regions}). That is well short of the {{published.open_england|int}} said to be open in England, so this is a floor. The distribution is strongly southern and coastal: {{combined.south_open|int}} ({{combined.share_south|pct0}}) are in London, the South East and the South West, and {{combined.share_coastal_open|pct0}} lie within 2 km of the sea. The South West has {{combined.sw_open|int}} pools, {{combined.top_per_million|f1}} per million residents, the highest rate of any region, and {{combined.sw_coastal_open|int}} of them are coastal. OpenStreetMap tags {{osm.open_tidal|int}} working tidal or sea pools, {{osm.tidal_cornwall|int}} of them in Cornwall. The three northern English regions together have {{combined.north_open|int}}.
+
+\begin{figure}[tbp]\centering
+\includegraphics[width=0.72\textwidth]{f_map.png}
+\caption{Register entries by status today, and working open-air pools found only in OpenStreetMap (small dots). Positions of {{register.approx_positions|int}} register entries are approximate town points.}\label{fig:map}
+\end{figure}
+
+{{TABLE_REGIONS}}
+
+\begin{figure}[tbp]\centering
+\includegraphics[width=0.85\textwidth]{f_regions.png}
+\caption{Working open-air pools (solid) and closed or disused sites (hatched) on the map by region, with working pools per million residents (Census 2021, England and Wales).}\label{fig:regions}
+\end{figure}
+
+\section{Discussion}
+
+The open record supports the familiar three-act story, with two qualifications. First, the boom was even more concentrated than the phrase ``interwar lido'' suggests: two thirds of all the dated openings in the register fall in a single decade, and the 1920s and the post-war decades contribute little. Second, the comeback is almost entirely a twenty-first-century phenomenon. Only two reopenings in the register predate 2000; the rest follow the campaigns and heritage listings of the 2000s and the lottery, coastal and community-ownership grants that the individual articles describe.
+
+The geography of what survives is the geography of the sea and the south. The South West's lead rests on its coast: tidal and sea pools, refilled by the tide and cheap to keep, survive where heated freshwater pools in inland towns have closed, and the coast of Devon and Cornwall holds the largest cluster of working outdoor pools on the map. London kept a core of its interwar lidos, several only after long campaigns.
+
+What the register cannot do is measure the scale of the decline. A demolished pool of 1975 rarely has a Wikipedia article; a rescued, listed one usually does. The share of documented pools that closed ({{fate.share_ever_closed|pct0}}) and the share of those that reopened ({{fate.share_closed_reopened|pct0}}) should therefore be read as properties of a well-documented, survivor-heavy sample, not of all British lidos.
+
+\section{Limitations}
+
+The register is a documented sample, not a census; it holds about a fifth of the 1930s lidos that secondary sources say were built. It over-represents open, listed and campaigned-for pools. Dates come from Wikipedia text, Wikidata and OpenStreetMap tags and are only as good as those sources; where articles disagree (Black Rock, Brighton: 1978 or 1979), I note it. ``Closed'' simplifies pools that closed more than once. {{register.unknown|int}} register entries have unknown status, and {{register.approx_positions|int}} have approximate positions. The OpenStreetMap inventory reflects what mappers have tagged; pools without a revealing name or an outdoor tag are missed, and the {{osm.unclear|int}} unclear sites are left out of the counts. The best published compilations, such as Smith (2005), are not open data and were not used.
+
+\section{Conclusion}
+
+Open sources confirm the shape of the lido story. In the register, {{openings.share_peak|pct0}} of dated openings fall in the 1930s, {{closures.share_1970_1999|pct0}} of dated closures in 1970 to 1999, and {{reopenings.since_2000|int}} of {{reopenings.n|int}} reopenings after 2000. Today's open-air pools are concentrated in the south and on the coast. The register and map are a starting point that others can extend: every entry cites its source, and missing pools, dates and closures can be added.
+
+\section*{Data and code availability}
+
+The register (\texttt{lidos.csv}, with sources and evidence for every entry), the OpenStreetMap inventory, decade and regional summaries, the map layer and all reported numbers (\texttt{results.json}) are at \url{https://github.com/Tristan-Hotham/lido-boom}, with the analysis code, and in the Zenodo record for this paper (\url{https://doi.org/10.5281/zenodo.23729646}). The interactive version is at \url{https://tristan-hotham.github.io/lido-boom/}. Because the register quotes and derives from Wikipedia (CC BY-SA 4.0), the derived data and text are released under CC BY-SA 4.0; the OpenStreetMap-derived tables are also available under the Open Database Licence. Code is MIT. Contains OS data \textcopyright{} Crown copyright and database right 2026, and ONS data, used under the Open Government Licence v3.0.
+
+\section*{Funding and competing interests}
+
+This work received no funding. The author declares no competing interests.
+
+\section*{Use of AI}
+
+I wrote the text, with drafting and editing assistance from Claude (Anthropic), which also helped prepare the analysis code. I reviewed and checked all text and results.
+
+\section*{References}
+\small
+\setlength{\parskip}{0.35em}
+\hangindent=1.5em Natural Earth. 1:10m coastline and land. Public domain. \url{https://www.naturalearthdata.com}
+
+\hangindent=1.5em Office for National Statistics (2022). Census 2021: TS001 Number of usual residents in households and communal establishments. Open Government Licence v3.0. \url{https://www.nomisweb.co.uk}
+
+\hangindent=1.5em OpenStreetMap contributors (2026). OpenStreetMap data for the United Kingdom, retrieved 28 October 2026 via QLever. Open Database Licence. \url{https://www.openstreetmap.org}
+
+\hangindent=1.5em Ordnance Survey (2026). OS Open Names. Open Government Licence v3.0. \url{https://www.ordnancesurvey.co.uk/products/os-open-names}
+
+\hangindent=1.5em Smith, J. (2005). \textit{Liquid Assets: the lidos and open air swimming pools of Britain}. Played in Britain series. London: English Heritage. ISBN 0-9547445-0-0.
+
+\hangindent=1.5em Wikidata contributors (2026). Wikidata items in lido and swimming pool classes with country United Kingdom, retrieved 28 October 2026. CC0. \url{https://www.wikidata.org}
+
+\hangindent=1.5em Wikipedia contributors (2026a). History of lidos in the United Kingdom. English Wikipedia, retrieved October 2026. CC BY-SA 4.0. \url{https://en.wikipedia.org/wiki/History_of_lidos_in_the_United_Kingdom}
+
+\hangindent=1.5em Wikipedia contributors (2026b). Articles on individual lidos, seaside towns and parks cited in the register (\texttt{lidos.csv}), retrieved October 2026. CC BY-SA 4.0. \url{https://en.wikipedia.org}
+
+\hangindent=1.5em Wikipedia contributors (2026c). Lido (swimming pool). English Wikipedia, retrieved October 2026. CC BY-SA 4.0. \url{https://en.wikipedia.org/wiki/Lido_(swimming_pool)}
+
+\end{document}
